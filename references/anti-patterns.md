@@ -17,7 +17,7 @@ The enemy is not a word. The enemy is **generic, risk-free, evidence-free prose 
 - **§1 Tier 1 banned words — always replace** · 1a "delve" family · 1b "tapestry/landscape/realm" · 1c "testament/cornerstone" · 1d corporate verbs (leverage/utilize) · 1e empty adjectives (robust/seamless) · 1f "pivotal/crucial/vital" · 1g abstraction family (paradigm/framework) · 1h profundity markers (fundamentally/at its core) · 1i flattery/hype · 1j consensus-signaling (undoubtedly/clearly) · 1k 2024–2026 AI tells (underscore/showcase/meticulous)
 - **§2 Tier 2 watchlist** — flag when 3+ cluster in one post
 - **§3 Banned phrases** · 3a throat-clearing openers · 3b meta-commentary · 3c emphasis crutches · 3d closing boilerplate · 3e false profundity · 3f "not just X, but Y" · 3g reader-targeting · 3h "dive deeper" · 3i journey metaphors · 3j sycophantic openers · 3k "as of my last knowledge update"
-- **§4 Banned structural patterns** · 4a rule of three · 4b uniform sentence length · 4c hedging seesaw · 4d "not only X, but also Y" · 4e false balance · 4f binary contrasts · 4g restatement loop · 4h summary paragraphs · 4i rehash transitions · 4j "in conclusion" · 4k bullet-list padding · 4l em-dash abuse · 4m "however/moreover" pile-ups · 4n academic intro · 4o passive-voice hedging
+- **§4 Banned structural patterns** · 4a rule of three · 4b uniform sentence length · 4c hedging seesaw · 4d "not only X, but also Y" · 4e false balance · 4f binary contrasts · 4g restatement loop · 4h summary paragraphs · 4i rehash transitions · 4j "in conclusion" · 4k bullet-list padding · 4l em-dash abuse · 4m "however/moreover" pile-ups · 4n academic intro · 4o passive-voice hedging · 4p prophecy closer
 - **§5 AI-slop smell tests** — 10 holistic checks
 - **§6 Security-specific anti-patterns** · 6a FUD without quantification · 6b vulnerability without defense · 6c theoretical-vs.-PoC-vs.-wild-vs.-KEV confusion · 6d breathless trivial findings · 6e vendor-bashing without a design principle · 6f passive threat framing · 6g missing affected versions · 6h advisory-voice copy-paste · 6i "defense in depth" as substitute for ranking · 6j security theater · 6k medical-device lazy takes · 6l "DICOM is old" throat-clear
 - **§7 Hard caps** — numerical limits with rationale
@@ -111,7 +111,7 @@ These nouns pretend a claim is self-evidently important. They are always replace
 | **holistic** | Means "I won't be specific." | Delete. |
 | **comprehensive** | Usually means "long." | "covers X, Y, Z" — or drop. |
 | **intricate** | Top-5 LLM marker (+700%). | "complicated," and explain *how*. |
-| **nuanced** | "I don't want to take a position." | Take the position. |
+| **nuanced** | "I don't want to take a position." | Take the position. (See the note after the table — this word is a symptom of a bigger failure.) |
 | **rich** ("rich feature set," "rich data") | Marketing. | Count the features or describe the data. |
 | **vibrant** | Travel brochure. | Delete. |
 | **compelling** | Begging the reader to agree. | Make the case instead. |
@@ -120,6 +120,8 @@ These nouns pretend a claim is self-evidently important. They are always replace
 
 **Bad:** *Our robust, comprehensive, cutting-edge platform delivers seamless integration across your nuanced threat landscape.*
 **Fixed:** *It's a Python agent, 900 lines, that tails Suricata and posts to Slack. It missed two of twelve red-team beacons in the last exercise.*
+
+**The "nuanced" tell points at a bigger failure than one word.** "Nuanced" is the vocabulary symptom; the disease is a draft laundered into generic-AI shape — every quirk sanded off, every hot take hedged into neutrality, every weird tangent cut for "flow." The author's job is the opposite: get the quirks, the hot takes, and the "I tried this and it was stupid" moments onto the page. A draft with zero personal opinions, zero asides, and zero dead ends can pass every word-level, phrase-level, and structural check in this file and still be slop, because it has been homogenized — it reads like the median of the training corpus, which is exactly the failure §5.7 and §5.5 are built to catch. So make "did the author show up?" a thing you check, not a vibe you hope for: point at the sentence only this author, with this specific hands-on experience, would have written. If there isn't one, the draft isn't done — it's been averaged.
 
 ### 1f. The "pivotal" family — importance inflation
 
@@ -459,6 +461,18 @@ The LLM default intro is: attention-grabbing generality → 2–3 paragraphs of 
 "Mistakes were made." "Sensitive data was exposed." "It was determined that..." Name the actor when you can. Passive is fine when the actor is unknown or irrelevant ("RSA was published in 1977"), but LLMs use passive to avoid naming vendors, teams, or their own opinions. That's cowardice.
 
 Security-specific case: if a vendor screwed up, **name the vendor**. "Siemens syngo.plaza accepted unauthenticated DICOM queries" is journalism. "Unauthenticated queries were accepted by a leading medical imaging platform" is cover-your-ass slop.
+
+### 4p. The prophecy closer
+
+The closer that dodges every banned word in §3d and §4j and still reads like a LinkedIn post. The shape: *"The [entities] who will [thrive / succeed / win] in this [era] are the ones who [action]."*
+
+- "The teams that will survive the next wave of ransomware are the ones who treat backups as a security control, not an IT chore."
+- "The hospitals that thrive in the post-quantum era will be the ones that started their crypto inventory today."
+- "The engineers who win in the age of AI are the ones who learn to ask better questions."
+
+No Tier-1 word, no "in conclusion," no "stay vigilant" — so the word-level and phrase-level passes wave it through. The tell is structural: a future-tense sorting of an unnamed group into winners and losers, conditioned on a vague virtue, with no named loser, no named winner, no number, no date. It is the §3d closing exhortation wearing a prophecy costume, and it counts against the zero-closing-exhortation cap in §7.
+
+**Rule:** ban the structure, not just the vocabulary. Grep every closer for the shapes *"who will [verb],"* *"the ones who,"* and *"will [thrive / succeed / win / survive] in [the era / this age / the world of]."* If the final paragraph sorts an unnamed group into a future outcome based on an abstract behavior, cut it. End on the last substantive claim, or use one of the three earned closers — prescription-or-refusal, catchphrase reuse, specific call-to-action — from the skill's "Closers" section. The prophecy closer is none of the three: it prescribes nothing specific, reuses no coined name, and asks for no concrete action. It just flatters the reader that they might be one of the winners.
 
 ---
 
