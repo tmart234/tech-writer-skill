@@ -574,7 +574,6 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 | **Tricolons** | ≤ 1 per 500 words | See §4a. |
 | **"However" / "Moreover" / "Furthermore" / "Additionally"** | ≤ 1 per 500 words, combined | See §4m. |
 | **Sentence-length standard deviation (within any paragraph of 4+ sentences)** | ≥ 8 words | LLM burstiness signature; humans vary more ([GPTZero](https://gptzero.me/)). |
-| **Consecutive sentences under ~5 words** | ≤ 3 | Staccato overused becomes the short-side metronome (§4b). |
 | **Bold (as % of body text)** | ≤ 2% | More than 2% = listicle. Bold for terms-of-art on first use and occasional key phrases. |
 | **Italic (as % of body text)** | ≤ 3% | Italics for code/terms/emphasis. Over 3% means italics stop meaning anything. |
 | **Consecutive sentences starting with the same word** | ≤ 2 | Three "The ..." sentences in a row = rewrite. |
