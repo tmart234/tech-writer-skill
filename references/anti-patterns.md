@@ -385,6 +385,8 @@ LLM prose drifts toward a median sentence length of 18–22 words with low varia
 
 GPTZero's "burstiness" metric is explicitly this ([GPTZero FAQ](https://gptzero.me/)). Target: **sentence-length standard deviation ≥ 8 words** within any paragraph of 4+ sentences. If every sentence in a paragraph is 15–22 words long, rewrite with some short punches and at least one long sentence.
 
+**The short-side tic.** The metronome runs both ways. A run of clipped sub-five-word fragments — *"This is a choice. It was always a choice. They knew."* — is its own uniform-length tell, and staccato overused stops delivering contempt and starts reading as a verbal tic. Cap: no more than three sub-five-word sentences back to back. (See `SKILL.md` → "Voice and mechanics" → staccato.)
+
 ### 4c. The hedging seesaw
 
 Every claim balanced by its opposite: "While X is true, it's also worth noting that Y. However, Z..." LLMs do this to minimize RLHF-penalty risk. It reads as cowardice.
@@ -572,6 +574,7 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 | **Tricolons** | ≤ 1 per 500 words | See §4a. |
 | **"However" / "Moreover" / "Furthermore" / "Additionally"** | ≤ 1 per 500 words, combined | See §4m. |
 | **Sentence-length standard deviation (within any paragraph of 4+ sentences)** | ≥ 8 words | LLM burstiness signature; humans vary more ([GPTZero](https://gptzero.me/)). |
+| **Consecutive sentences under ~5 words** | ≤ 3 | Staccato overused becomes the short-side metronome (§4b). |
 | **Bold (as % of body text)** | ≤ 2% | More than 2% = listicle. Bold for terms-of-art on first use and occasional key phrases. |
 | **Italic (as % of body text)** | ≤ 3% | Italics for code/terms/emphasis. Over 3% means italics stop meaning anything. |
 | **Consecutive sentences starting with the same word** | ≤ 2 | Three "The ..." sentences in a row = rewrite. |
