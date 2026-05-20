@@ -28,7 +28,7 @@ The enemy is not a word. The enemy is **generic, risk-free, evidence-free prose 
 
 ## 1. Tier 1 banned words: always replace
 
-These words are LLM tells with statistical backing. In the two largest studies to date, `delve` grew ~1,500% in PubMed abstracts between 2022 and 2024, `underscore` grew ~1,000%, `intricate` ~700%, and `meticulous` ~800% — with `delve` jumping from roughly 0.5 to 7.9 mentions per 1,000 papers in a single year ([Kobak et al., *Science Advances*, 2025](https://www.science.org/doi/10.1126/sciadv.adt3813); [Zhang et al., *Scientometrics*, 2026](https://link.springer.com/article/10.1007/s11192-026-05601-5); [Shapira, 2024](https://pshapira.net/2024/03/31/delving-into-delve/)). Juzek & Ward at FSU traced the overuse to RLHF feedback pipelines, not training data — i.e. humans rating model outputs preferred these words, so the models learned to produce them ([Juzek & Ward, arXiv:2412.11385](https://arxiv.org/html/2508.01930v1)).
+These words are LLM tells with statistical backing. In the two largest studies to date, `delve` grew ~1,500% in PubMed abstracts between 2022 and 2024, `underscore` grew ~1,000%, `intricate` ~700%, and `meticulous` ~800%, with `delve` jumping from roughly 0.5 to 7.9 mentions per 1,000 papers in a single year ([Kobak et al., *Science Advances*, 2025](https://www.science.org/doi/10.1126/sciadv.adt3813); [Zhang et al., *Scientometrics*, 2026](https://link.springer.com/article/10.1007/s11192-026-05601-5); [Shapira, 2024](https://pshapira.net/2024/03/31/delving-into-delve/)). Juzek & Ward at FSU traced the overuse to RLHF feedback pipelines, not training data: humans rating model outputs preferred these words, so the models learned to produce them ([Juzek & Ward, arXiv:2412.11385](https://arxiv.org/html/2508.01930v1)).
 
 Two-thirds of the excess 2024 "style" words were verbs; about a fifth were adjectives ([Kobak et al., 2025](https://www.science.org/doi/10.1126/sciadv.adt3813); [Futurism summary](https://futurism.com/the-byte/ai-overuses-specific-words)). That is the shape of the problem: it's not content words, it's posture words.
 
@@ -78,7 +78,7 @@ These nouns pretend a claim is self-evidently important. They are always replace
 | **the backbone of** | Same. | "X handles Y's Z function." |
 
 **Bad:** *TLS is the cornerstone of modern web security, a testament to decades of cryptographic research.*
-**Fixed:** *TLS 1.3 removed RSA key exchange, CBC modes, and renegotiation — three of the four most common interception bugs from 1.2.*
+**Fixed:** *TLS 1.3 removed RSA key exchange, CBC modes, and renegotiation: three of the four most common interception bugs from 1.2.*
 
 ### 1d. The corporate verb family: motion without work
 
@@ -122,7 +122,7 @@ These nouns pretend a claim is self-evidently important. They are always replace
 **Bad:** *Our robust, comprehensive, cutting-edge platform delivers seamless integration across your nuanced threat landscape.*
 **Fixed:** *It's a Python agent, 900 lines, that tails Suricata and posts to Slack. It missed two of twelve red-team beacons in the last exercise.*
 
-**The "nuanced" tell points at a bigger failure than one word.** "Nuanced" is the vocabulary symptom; the disease is a draft laundered into generic-AI shape — every quirk sanded off, every hot take hedged into neutrality, every weird tangent cut for "flow." The author's job is the opposite: get the quirks, the hot takes, and the "I tried this and it was stupid" moments onto the page. A draft with zero personal opinions, zero asides, and zero dead ends can pass every word-level, phrase-level, and structural check in this file and still be slop, because it has been homogenized — it reads like the median of the training corpus, which is exactly the failure §5.7 and §5.5 are built to catch. So make "did the author show up?" a thing you check, not a vibe you hope for: point at the sentence only this author, with this specific hands-on experience, would have written. If there isn't one, the draft isn't done — it's been averaged.
+**The "nuanced" tell points at a bigger failure than one word.** "Nuanced" is the vocabulary symptom; the disease is a draft laundered into generic-AI shape: every quirk sanded off, every hot take hedged into neutrality, every weird tangent cut for "flow." The author's job is the opposite: get the quirks, the hot takes, and the "I tried this and it was stupid" moments onto the page. A draft with zero personal opinions, zero asides, and zero dead ends can pass every word-level, phrase-level, and structural check in this file and still be slop, because it has been homogenized. It reads like the median of the training corpus, which is exactly the failure §5.7 and §5.5 are built to catch. So make "did the author show up?" a thing you check, not a vibe you hope for: point at the sentence only this author, with this specific hands-on experience, would have written. If there isn't one, the draft isn't done. It's been averaged.
 
 ### 1f. The "pivotal" family: importance inflation
 
@@ -152,7 +152,7 @@ These are legitimate technical words being used as generic filler. Flag whenever
 | **framework** | Named framework (Django, MITRE ATT&CK). | "a framework for thinking about..." (usually means "some thoughts"). |
 | **methodology** | Actual named methodology (STRIDE, PASTA). | "our methodology was to..." when you mean "we did." |
 | **approach** | "Two approaches: BFS and DFS." | "a holistic approach to..." |
-| **solution** | A specific product or fix. | "our solution enables..." — corporate. |
+| **solution** | A specific product or fix. | "our solution enables..." (corporate). |
 | **mechanism** | Concrete mechanism (CSRF token, TLS handshake). | "a mechanism for..." when you mean "a way to." |
 | **strategy** | Named strategy. | Generic "strategic." |
 | **ideation, synergy, alignment, actionable, stakeholder** (outside its narrow technical sense) | Almost never. | Almost always. |
@@ -312,7 +312,7 @@ GPTZero's top AI-phrase list is led by exactly this kind of throat-clearing: *"t
 
 ### 3c. Emphasis crutches
 
-"Needless to say" — then don't say it. "Without a doubt" — earn the doubt's absence. "It goes without saying" — then let it.
+"Needless to say": then don't say it. "Without a doubt": earn the doubt's absence. "It goes without saying": then let it.
 
 All of these go in the bin. If the claim needs propping up with an adverb, it needs propping up with evidence.
 
@@ -334,7 +334,7 @@ Paul Graham's entire *Write Simply* essay is worth internalizing here: "if you s
 
 ### 3e. False-profundity phrases
 
-"At its core," "fundamentally speaking," "in essence," "when all is said and done," "the fact of the matter is," "the truth is" — these add nothing and signal RLHF training. Delete and make the claim directly.
+"At its core," "fundamentally speaking," "in essence," "when all is said and done," "the fact of the matter is," "the truth is": these add nothing and signal RLHF training. Delete and make the claim directly.
 
 ### 3f. The "not just X, but Y" tic
 
@@ -344,7 +344,7 @@ The single most reliable LLM sentence pattern. Technically called a **contrastiv
 - "We're not just building a product — we're building an experience."
 - "X isn't just evolving; it's accelerating."
 
-**Rule:** grep every draft for `not just`. If you find it, assume slop and rewrite. Legitimate contrastive negation exists ("this is not a buffer overflow; it's a use-after-free") — that's fine because it distinguishes two *specific* things. The slop version distinguishes a thing from a vaguer version of itself.
+**Rule:** grep every draft for `not just`. If you find it, assume slop and rewrite. Legitimate contrastive negation exists ("this is not a buffer overflow; it's a use-after-free"): that's fine because it distinguishes two *specific* things. The slop version distinguishes a thing from a vaguer version of itself.
 
 ### 3g. "Whether you're X or Y" reader-targeting
 
@@ -374,9 +374,9 @@ Word-level fixes aren't enough. LLMs have architectural tells.
 
 ### 4a. The rule of three (compulsive tricolon)
 
-LLMs can't stop themselves from listing in threes. Parallel nouns, parallel verbs, parallel clauses — always three. "Authority, clarity, and inoffensiveness." "Fast, scalable, and reliable." "Errors, quirks, and mistakes." Colin Gorrie identified this as one of the defining rhetorical tics of LLM prose ([*Dead Language Society*](https://www.deadlanguagesociety.com/p/rhetorical-analysis-ai)).
+LLMs can't stop themselves from listing in threes. Parallel nouns, parallel verbs, parallel clauses: always three. "Authority, clarity, and inoffensiveness." "Fast, scalable, and reliable." "Errors, quirks, and mistakes." Colin Gorrie identified this as one of the defining rhetorical tics of LLM prose ([*Dead Language Society*](https://www.deadlanguagesociety.com/p/rhetorical-analysis-ai)).
 
-Churchill's tricolons ("blood, toil, tears and sweat" — which is actually four) worked because he deployed them rarely and for rhythm. LLMs deploy them every third sentence.
+Churchill's tricolons ("blood, toil, tears and sweat," which is actually four) worked because he deployed them rarely and for rhythm. LLMs deploy them every third sentence.
 
 **Rule:** scan for tricolons. Keep at most one per 500 words. Break the rest into pairs, or single terms, or actual enumerated lists. If you have three real things, consider four or two.
 
@@ -386,7 +386,7 @@ LLM prose drifts toward a median sentence length of 18–22 words with low varia
 
 GPTZero's "burstiness" metric is explicitly this ([GPTZero FAQ](https://gptzero.me/)). Target: **sentence-length standard deviation ≥ 8 words** within any paragraph of 4+ sentences. If every sentence in a paragraph is 15–22 words long, rewrite with some short punches and at least one long sentence.
 
-**The short-side tic.** The metronome runs both ways. A run of clipped sub-five-word fragments — *"This is a choice. It was always a choice. They knew."* — is its own uniform-length tell, and staccato overused stops delivering contempt and starts reading as a verbal tic. Cap: no more than three sub-five-word sentences back to back. (See `SKILL.md` → "Voice and mechanics" → staccato.)
+**The short-side tic.** The metronome runs both ways. A run of clipped sub-five-word fragments (*"This is a choice. It was always a choice. They knew."*) is its own uniform-length tell, and staccato overused stops delivering contempt and starts reading as a verbal tic. Cap: no more than three sub-five-word sentences back to back. (See `SKILL.md` → "Voice and mechanics" → staccato.)
 
 ### 4c. The hedging seesaw
 
@@ -429,7 +429,7 @@ See §3d. Any conclusion paragraph that begins by announcing itself is slop. End
 Bullets exist for: enumerations where order doesn't matter, parallel short items, and checklists. They do not exist for:
 
 - padding a 2-paragraph argument into a visually-busy page
-- three-bullet items where each bullet is a full paragraph (that's prose — write prose)
+- three-bullet items where each bullet is a full paragraph (that's prose; write prose)
 - restatement of the preceding paragraph in list form
 
 Rule: if you can replace the bulleted section with two sentences and lose nothing, do it.
@@ -447,7 +447,7 @@ The most-debated tell. The data:
 - Historical English peaked at ~0.35% em-dashes circa 1860 and now sits at ~0.25–0.275% ([Goedecke, 2025](https://www.seangoedecke.com/em-dashes/)).
 - The em-dash is not a definitive tell in isolation; it correlates with other markers ([*Night Water*](https://www.nightwater.email/em-dash-ai/); [MIT Tech Review via *Night Water*](https://www.nightwater.email/em-dash-ai/)).
 
-**Recommendation for this skill:** cap at **3 em dashes per 1,000 words** (roughly 0.03–0.04% of tokens — well below both the AI floor and historical human peak). The current skill's cap of 1 per 1,000 is defensible as a stricter rule, but too punishing given that real human writers legitimately use them. **3 per 1,000 is the right number.** Prefer period, colon, parenthesis, or restructure. Never use an em-dash in "not X — it's Y" constructions (§3f).
+**Recommendation for this skill:** cap at **3 em dashes per 1,000 words** (roughly 0.03–0.04% of tokens, well below both the AI floor and historical human peak). The current skill's cap of 1 per 1,000 is defensible as a stricter rule, but too punishing given that real human writers legitimately use them. **3 per 1,000 is the right number.** Prefer period, colon, parenthesis, or restructure. Never use an em-dash in "not X — it's Y" constructions (§3f).
 
 ### 4m. Sentence-starting "Moreover," "Furthermore," "Additionally" pile-ups
 
@@ -457,7 +457,7 @@ These transitions are fine once per post. Two in a row is a tell. Three anywhere
 
 The LLM default intro is: attention-grabbing generality → 2–3 paragraphs of background → thesis statement. By paragraph 3 the reader has left.
 
-**Replacement pattern:** start at the thesis or the scene. Paul Graham: *"The goal of an essay is to surprise the reader"* ([*Writing Routines* interview](https://www.writingroutines.com/paul-graham-interview/)). Dan Luu, rachelbythebay, and tptacek all open cold — claim in sentence one, evidence in sentence two.
+**Replacement pattern:** start at the thesis or the scene. Paul Graham: *"The goal of an essay is to surprise the reader"* ([*Writing Routines* interview](https://www.writingroutines.com/paul-graham-interview/)). Dan Luu, rachelbythebay, and tptacek all open cold: claim in sentence one, evidence in sentence two.
 
 ### 4o. Passive-voice hedging
 
@@ -473,9 +473,9 @@ The closer that dodges every banned word in §3d and §4j and still reads like a
 - "The hospitals that thrive in the post-quantum era will be the ones that started their crypto inventory today."
 - "The engineers who win in the age of AI are the ones who learn to ask better questions."
 
-No Tier-1 word, no "in conclusion," no "stay vigilant" — so the word-level and phrase-level passes wave it through. The tell is structural: a future-tense sorting of an unnamed group into winners and losers, conditioned on a vague virtue, with no named loser, no named winner, no number, no date. It is the §3d closing exhortation wearing a prophecy costume, and it counts against the zero-closing-exhortation cap in §7.
+No Tier-1 word, no "in conclusion," no "stay vigilant": the word-level and phrase-level passes wave it through. The tell is structural: a future-tense sorting of an unnamed group into winners and losers, conditioned on a vague virtue, with no named loser, no named winner, no number, no date. It is the §3d closing exhortation wearing a prophecy costume, and it counts against the zero-closing-exhortation cap in §7.
 
-**Rule:** ban the structure, not just the vocabulary. Grep every closer for the shapes *"who will [verb],"* *"the ones who,"* and *"will [thrive / succeed / win / survive] in [the era / this age / the world of]."* If the final paragraph sorts an unnamed group into a future outcome based on an abstract behavior, cut it. End on the last substantive claim, or use one of the three earned closers — prescription-or-refusal, catchphrase reuse, specific call-to-action — from the skill's "Closers" section. The prophecy closer is none of the three: it prescribes nothing specific, reuses no coined name, and asks for no concrete action. It just flatters the reader that they might be one of the winners.
+**Rule:** ban the structure, not just the vocabulary. Grep every closer for the shapes *"who will [verb],"* *"the ones who,"* and *"will [thrive / succeed / win / survive] in [the era / this age / the world of]."* If the final paragraph sorts an unnamed group into a future outcome based on an abstract behavior, cut it. End on the last substantive claim, or use one of the three earned closers (prescription-or-refusal, catchphrase reuse, specific call-to-action) from the skill's "Closers" section. The prophecy closer is none of the three: it prescribes nothing specific, reuses no coined name, and asks for no concrete action. It just flatters the reader that they might be one of the winners.
 
 ### 4q. Constant juxtaposition (the antithesis reflex)
 
@@ -538,7 +538,7 @@ Security writing has its own failure modes on top of everything above.
 
 ### 6b. Vulnerability without defense
 
-If you describe how to exploit X, describe (at minimum) what to do about X. Not because of responsible-disclosure theater — because a vuln writeup without mitigation is half the work. Project Zero posts do this well: every teardown ends with "fixed in version N; here's the patch."
+If you describe how to exploit X, describe (at minimum) what to do about X. Not because of responsible-disclosure theater: a vuln writeup without mitigation is half the work. Project Zero posts do this well: every teardown ends with "fixed in version N; here's the patch."
 
 ### 6c. Conflating theoretical CVE with actively exploited
 
@@ -593,7 +593,7 @@ DICOM is from 1993. Every reader knows. Start at the bug.
 
 ## 7. Hard caps (numbers)
 
-Defensible, evidence-based, not arbitrary. These are tuned for the author's voice (principal engineer, unflinching, technical) — they would be too loose for a newsletter and too tight for a textbook.
+Defensible, evidence-based, not arbitrary. These are tuned for the author's voice (principal engineer, unflinching, technical). They would be too loose for a newsletter and too tight for a textbook.
 
 | Metric | Cap | Rationale |
 |---|---|---|
@@ -663,7 +663,7 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 > Input validation is fundamentally one of the most important aspects of secure coding. By properly validating all inputs, developers can prevent a wide range of vulnerabilities including SQL injection and cross-site scripting. Therefore, input validation is critically important and should be a cornerstone of any secure development practice. It is essential to make input validation a core part of your coding process.
 
 **After:**
-> Two of the three SQL-injection bugs I found in [app] last quarter were in code that had a validator — just the wrong one. `validateAlphanumeric()` happily passed `1 OR 1=1`. The problem isn't "validate your inputs." The problem is that "validation" is four different jobs (allowlist, length, type, escape) and most codebases do one and call it done.
+> Two of the three SQL-injection bugs I found in [app] last quarter were in code that had a validator, just the wrong one. `validateAlphanumeric()` happily passed `1 OR 1=1`. The problem isn't "validate your inputs." The problem is that "validation" is four different jobs (allowlist, length, type, escape) and most codebases do one and call it done.
 
 **What changed:** replaced a restatement loop (sentences 1 and 3 are the same claim) with a specific finding and a taxonomy of what "input validation" actually means.
 
@@ -677,7 +677,7 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 **After:**
 > Zero trust works for identity and east-west network access. It doesn't help with supply-chain compromise, insider abuse of legitimate entitlements, or OT networks where you can't put an agent on a 15-year-old PLC. Buy it for the first. Don't pretend it solves the second.
 
-**What changed:** replaced symmetric hedging with an opinion — "works for A, doesn't work for B, C, D" — and a purchasing recommendation. Took a position.
+**What changed:** replaced symmetric hedging with an opinion ("works for A, doesn't work for B, C, D") and a purchasing recommendation. Took a position.
 
 ---
 
@@ -692,7 +692,7 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 > - Foster a culture of security awareness throughout the organization.
 
 **After:**
-> Three controls that pay for themselves in the first year, in order: (1) branch-protection + required review on the main branch — catches 60%+ of credential commits before push; (2) Dependabot + a weekly triage hour — kills ~80% of known-CVE exposure; (3) SAST in CI, tuned (default rulesets are noise). Everything else is marginal until those three are working.
+> Three controls that pay for themselves in the first year, in order: (1) branch-protection + required review on the main branch (catches 60%+ of credential commits before push); (2) Dependabot + a weekly triage hour (kills ~80% of known-CVE exposure); (3) SAST in CI, tuned (default rulesets are noise). Everything else is marginal until those three are working.
 
 **What changed:** replaced five generic bullets with three ranked ones, each with a rough effectiveness number and a failure mode for the defaults.
 
@@ -728,7 +728,7 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 > At its core, fundamentally speaking, authentication is essentially about trust. In essence, it's about answering a critical question: who are you, really?
 
 **After:**
-> Authentication answers one question: is this request coming from the principal it claims? Everything else — MFA factors, WebAuthn, SSO federation — is engineering around "we don't actually know, so let's raise the cost of lying."
+> Authentication answers one question: is this request coming from the principal it claims? MFA factors, WebAuthn, SSO federation: all of these are engineering around "we don't actually know, so let's raise the cost of lying."
 
 **What changed:** removed four profundity markers in a single sentence, replaced with a one-sentence definition and a frame that names the actual engineering problem.
 
@@ -740,7 +740,7 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 > A recent vulnerability (CVE-2025-XXXXX) has been disclosed in [Product], which could allow remote attackers to execute arbitrary code. Users are strongly encouraged to apply the latest security updates as soon as possible to mitigate this critical risk.
 
 **After:**
-> CVE-2025-XXXXX is a pre-auth RCE in [Product] 4.2.0–4.4.3 via a crafted `/api/import` multipart boundary. The patch (4.4.4, March 12) adds a length check the parser should have had since 2019 — the same bug class caused CVE-2022-YYYYY in the same file. If you run this product, `grep` your access logs for `POST /api/import` with `Content-Type` containing `boundary=` and a `Content-Length` above ~64KB; that's every attempt, exploit or not.
+> CVE-2025-XXXXX is a pre-auth RCE in [Product] 4.2.0–4.4.3 via a crafted `/api/import` multipart boundary. The patch (4.4.4, March 12) adds a length check the parser should have had since 2019; the same bug class caused CVE-2022-YYYYY in the same file. If you run this product, `grep` your access logs for `POST /api/import` with `Content-Type` containing `boundary=` and a `Content-Length` above ~64KB; that's every attempt, exploit or not.
 
 **What changed:** replaced advisory-speak with the actual vulnerability class, the affected versions, the specific endpoint, the historical-bug pattern ("this team has shipped this bug before"), and a grep command the reader can run tonight. This is the mode of tptacek, Tavis Ormandy, and Project Zero.
 
