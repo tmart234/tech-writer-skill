@@ -61,7 +61,7 @@ These are metaphors for a location the author never visits. They exist to take u
 | **ecosystem** | Fine when literal (npm ecosystem). Slop when figurative ("the security ecosystem"). | Name the actors: vendors, regulators, researchers, customers. |
 | **sphere / arena / space** | Same problem as landscape. "the MedTech space" = "MedTech." | Drop. |
 | **world** ("in today's world," "the world of X") | Implies universality to cover for lack of specifics. | Drop the frame; start at the claim. |
-| **domain** (non-technical sense) | OK as a technical term (Active Directory domain, problem domain). Slop as "the domain of cybersecurity." | If you mean "field," say "field" — or better, name it. |
+| **domain** (non-technical sense) | OK as a technical term (Active Directory domain, problem domain). Slop as "the domain of cybersecurity." | If you mean "field," say "field"; or better, name it. |
 
 **Bad:** *In the ever-evolving landscape of medical device cybersecurity, the DICOM realm presents unique challenges.*
 **Fixed:** *Every PACS I've tested since 2019 accepts anonymous C-ECHO on port 104. That is the bug.*
@@ -73,7 +73,7 @@ These nouns pretend a claim is self-evidently important. They are always replace
 | Banned | Why | Replace with |
 |---|---|---|
 | **testament** ("a testament to") | Religious register, zero content. | "proves," "shows," or supply the measurement. |
-| **hallmark** | Usually decorative. | "typical of," "characteristic of" — or drop. |
+| **hallmark** | Usually decorative. | "typical of," "characteristic of"; or drop. |
 | **cornerstone / bedrock / pillar / foundation** (metaphoric) | Building metaphors hide the absence of an argument. | Say which property you mean: "required for," "depends on," "assumed by." |
 | **the backbone of** | Same. | "X handles Y's Z function." |
 
@@ -110,9 +110,9 @@ These nouns pretend a claim is self-evidently important. They are always replace
 | **cutting-edge / state-of-the-art / bleeding-edge** | Top-20 LLM marker ([GPTZero](https://gptzero.me/ai-vocabulary)). | Name the version, the paper, the year. "SOTA on CIFAR-10 in 2019" beats "cutting-edge." |
 | **innovative** | Always applause, never description. | Describe what's new. |
 | **holistic** | Means "I won't be specific." | Delete. |
-| **comprehensive** | Usually means "long." | "covers X, Y, Z" — or drop. |
+| **comprehensive** | Usually means "long." | "covers X, Y, Z"; or drop. |
 | **intricate** | Top-5 LLM marker (+700%). | "complicated," and explain *how*. |
-| **nuanced** | "I don't want to take a position." | Take the position. (See the note after the table — this word is a symptom of a bigger failure.) |
+| **nuanced** | "I don't want to take a position." | Take the position. (See the note after the table: this word is a symptom of a bigger failure.) |
 | **rich** ("rich feature set," "rich data") | Marketing. | Count the features or describe the data. |
 | **vibrant** | Travel brochure. | Delete. |
 | **compelling** | Begging the reader to agree. | Make the case instead. |
@@ -128,7 +128,7 @@ These nouns pretend a claim is self-evidently important. They are always replace
 
 | Banned | Why | Replace with |
 |---|---|---|
-| **pivotal** | Top-10 LLM marker; appears in ~15% of 2024 PMC papers ([Zhang et al., 2026](https://link.springer.com/article/10.1007/s11192-026-05601-5)). | "important" — or explain *why*. Usually just delete. |
+| **pivotal** | Top-10 LLM marker; appears in ~15% of 2024 PMC papers ([Zhang et al., 2026](https://link.springer.com/article/10.1007/s11192-026-05601-5)). | "important"; or explain *why*. Usually just delete. |
 | **paramount** | Pure LLM. | Delete. If something is critical, prove it. |
 | **crucial / crucially** | Overused flag word. If everything is crucial, nothing is. | Delete; if the point survives without it, the word was padding. |
 | **vital** | Same. | Delete or specify: "required for FDA 510(k) clearance." |
@@ -149,7 +149,7 @@ These are legitimate technical words being used as generic filler. Flag whenever
 | Word | OK when... | Slop when... |
 |---|---|---|
 | **paradigm** | Paradigm shift in Kuhn's sense; programming paradigm (OOP vs. functional). | "a new paradigm for customer engagement." |
-| **framework** | Named framework (Django, MITRE ATT&CK). | "a framework for thinking about..." — usually means "some thoughts." |
+| **framework** | Named framework (Django, MITRE ATT&CK). | "a framework for thinking about..." (usually means "some thoughts"). |
 | **methodology** | Actual named methodology (STRIDE, PASTA). | "our methodology was to..." when you mean "we did." |
 | **approach** | "Two approaches: BFS and DFS." | "a holistic approach to..." |
 | **solution** | A specific product or fix. | "our solution enables..." — corporate. |
@@ -208,35 +208,35 @@ Undoubtedly a tell. (Pun intended.) These words pressure the reader into agreeme
 
 Marker words with statistically significant excess usage post-ChatGPT, from [Kobak et al. 2025](https://www.science.org/doi/10.1126/sciadv.adt3813), [Matsui 2024/2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12679996/), [Zhang et al. 2026](https://link.springer.com/article/10.1007/s11192-026-05601-5), and [GPTZero's top-50 list](https://gptzero.me/ai-vocabulary). Treat as Tier 1 unless flagged otherwise:
 
-- **underscore / underscores / underscored** — +1,000%; appeared in ~20% of 2024 PMC papers. Replace with "shows," "proves," or just assert the thing underscored.
-- **showcase / showcasing / showcased** — +500%+. Replace with "show" or demonstrate it.
-- **commendable** — +245%. Almost always delete; this word has no place in engineering writing.
-- **meticulous / meticulously** — +800%. If the work was careful, show the care; don't announce it.
-- **boast / boasts** — Product-brochure verb. Replace with "has."
-- **align / aligns / aligned with** (as rhetorical filler) — OK in literal alignment (register alignment, goal alignment). Slop as "aligns with best practices."
-- **foster / fostering** — §1d.
-- **captivate / captivating** — Delete.
-- **prowess** — Delete. Nobody writes "prowess" unprompted.
-- **symphony** (as metaphor) — Delete.
-- **testament** — §1c.
-- **bustling** — Delete.
-- **treasure trove** — Delete.
-- **pave the way** — "enables," or name the mechanism.
-- **stand as a testament** — See above; this is the tell of tells.
-- **in the realm of** — §1b.
-- **ever-evolving / ever-changing** — §3 throat-clearers.
-- **today's digital age / today's fast-paced world** — §3 throat-clearers.
-- **a myriad of / myriad** — "many" or give a count.
-- **plethora** — Same.
-- **navigate the complexities** — §3.
-- **the intersection of X and Y** — often filler. OK if you actually discuss both; slop otherwise.
-- **potential / potentially** — Top style marker per Kobak. Use only when making a probability claim; cut when it's throat-clearing ("potential benefits include...").
-- **primarily** — Top marker per Matsui 2025. Often deletable.
-- **various / varied** — Vague by design. Enumerate or cut.
-- **significantly** — §1f.
-- **additionally / moreover / furthermore** — See §4; pile-ups are the tell.
-- **overall** — Almost always deletable.
-- **ultimately** — §1h.
+- **underscore / underscores / underscored**: +1,000%; appeared in ~20% of 2024 PMC papers. Replace with "shows," "proves," or just assert the thing underscored.
+- **showcase / showcasing / showcased**: +500%+. Replace with "show" or demonstrate it.
+- **commendable**: +245%. Almost always delete; this word has no place in engineering writing.
+- **meticulous / meticulously**: +800%. If the work was careful, show the care; don't announce it.
+- **boast / boasts**: Product-brochure verb. Replace with "has."
+- **align / aligns / aligned with** (as rhetorical filler): OK in literal alignment (register alignment, goal alignment). Slop as "aligns with best practices."
+- **foster / fostering**: §1d.
+- **captivate / captivating**: Delete.
+- **prowess**: Delete. Nobody writes "prowess" unprompted.
+- **symphony** (as metaphor): Delete.
+- **testament**: §1c.
+- **bustling**: Delete.
+- **treasure trove**: Delete.
+- **pave the way**: "enables," or name the mechanism.
+- **stand as a testament**: See above; this is the tell of tells.
+- **in the realm of**: §1b.
+- **ever-evolving / ever-changing**: §3 throat-clearers.
+- **today's digital age / today's fast-paced world**: §3 throat-clearers.
+- **a myriad of / myriad**: "many" or give a count.
+- **plethora**: Same.
+- **navigate the complexities**: §3.
+- **the intersection of X and Y**: often filler. OK if you actually discuss both; slop otherwise.
+- **potential / potentially**: Top style marker per Kobak. Use only when making a probability claim; cut when it's throat-clearing ("potential benefits include...").
+- **primarily**: Top marker per Matsui 2025. Often deletable.
+- **various / varied**: Vague by design. Enumerate or cut.
+- **significantly**: §1f.
+- **additionally / moreover / furthermore**: See §4; pile-ups are the tell.
+- **overall**: Almost always deletable.
+- **ultimately**: §1h.
 
 ---
 
@@ -253,7 +253,7 @@ Count these against a cap of **≤ 2 per 1,000 words per word**, and **≤ 6 tot
 - given (as conjunction: "given that...")
 - effective / effectively
 - efficient / efficiently
-- robust (also Tier 1 — this one straddles)
+- robust (also Tier 1; this one straddles)
 - meaningful / meaningfully
 - valuable / value-add
 - diverse / diversity (outside literal demographic usage)
@@ -681,7 +681,7 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 
 ---
 
-### Fix-up 6 — Bullet-list padding
+### Fix-up 6: Bullet-list padding
 
 **Before:**
 > Secure software development requires a comprehensive approach:
@@ -698,7 +698,7 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 
 ---
 
-### Fix-up 7 — Sycophantic closer
+### Fix-up 7: Sycophantic closer
 
 **Before:**
 > In conclusion, by following these comprehensive best practices and leveraging the powerful insights outlined in this article, you'll be well-equipped to navigate the intricate challenges of modern application security and empower your organization to thrive in today's ever-evolving threat landscape. Stay safe out there!
@@ -710,7 +710,7 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 
 ---
 
-### Fix-up 8 — "Not just X, but Y" plus tricolon
+### Fix-up 8: "Not just X, but Y" plus tricolon
 
 **Before:**
 > DICOM isn't just a protocol — it's an ecosystem, a language, and a lifeline for modern radiology. It's not just about moving images; it's about enabling diagnosis, collaboration, and care.
@@ -722,7 +722,7 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 
 ---
 
-### Fix-up 9 — False-profundity opener
+### Fix-up 9: False-profundity opener
 
 **Before:**
 > At its core, fundamentally speaking, authentication is essentially about trust. In essence, it's about answering a critical question: who are you, really?
@@ -734,7 +734,7 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 
 ---
 
-### Fix-up 10 — Copy-pasted advisory voice
+### Fix-up 10: Copy-pasted advisory voice
 
 **Before:**
 > A recent vulnerability (CVE-2025-XXXXX) has been disclosed in [Product], which could allow remote attackers to execute arbitrary code. Users are strongly encouraged to apply the latest security updates as soon as possible to mitigate this critical risk.

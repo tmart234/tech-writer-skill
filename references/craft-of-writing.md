@@ -172,7 +172,7 @@ McEnerney spends significant time on the philosophy that knowledge is constructe
 
 McEnerney allows two exceptions: (a) the writing is so engaging that readers read for pleasure, and (b) the audience already knows the problem so well it doesn't need restating. Both apply rarely. For technical blogs, exception (b) is the more common claim writers make (*"my readers already know why TLS misconfiguration is bad, I can skip it"*), and is usually wrong. Even sophisticated readers benefit from the specific framing of *this* instance of the problem; "they already know" usually means "I'm too lazy to construct it."
 
-The exception that does sometimes apply: tutorial posts targeting a reader with an explicit pre-existing need (*"how to set up X"* — the reader already wants X). For tutorials, the problem is the reader's intent, and constructing additional instability is overkill. Lead with the steps.
+The exception that does sometimes apply: tutorial posts targeting a reader with an explicit pre-existing need (*"how to set up X"*, where the reader already wants X). For tutorials, the problem is the reader's intent, and constructing additional instability is overkill. Lead with the steps.
 
 ### Symbol/slogan (already covered)
 
@@ -180,28 +180,28 @@ Cross-reference: `how-to-speak.md` §4 already covers this. McEnerney doesn't ad
 
 ### Non-fiction style at the sentence level (SKIP)
 
-McEnerney spends little time on prose mechanics — sentence rhythm, word choice, paragraph structure. The skill's existing voice rules and `anti-patterns.md` cover this layer. McEnerney's contribution is at the structural and rhetorical layer above sentences.
+McEnerney spends little time on prose mechanics: sentence rhythm, word choice, paragraph structure. The skill's existing voice rules and `anti-patterns.md` cover this layer. McEnerney's contribution is at the structural and rhetorical layer above sentences.
 
 ---
 
-## Summary table — apply or skip
+## Summary table: apply or skip
 
 | McEnerney principle | Writing analog | Apply? |
 |---|---|---|
-| Value lives in readers, not work | Pass 0 valuable-to-whom sentence | **Yes — new** |
-| Writing process ≠ reading process | Pass 3 structural restructuring check | **Yes — new** |
-| Clear/Organized/Persuasive/Valuable | Quality-rubric prior question | **Yes — new** |
-| The CODE | Audience-specific vocabulary, security-blog code list | **Yes — new** |
-| Instability vocabulary | Positive word list for intros (but, however, anomaly, inconsistent) | **Yes — new** |
-| Stasis vs. background | Editing test for intro background blocks | **Yes — new** |
-| Problem in readers vs. world | Vuln writeup TL;DR earns its place; required for security posts | **Yes — new** |
-| Gap vs. error problem | Choose pressure profile; default to error for opinion posts | **Yes — new** |
-| Don't explain — change their ideas | Pass 3 paragraph-level test | **Yes — new** |
-| Feedback: "where do you stop seeing why this matters" | Reviewer prompt | **Yes — new** |
-| Lit review enriches problem | Prior-art section discipline | **Yes — new** |
-| Reader's costs, not writer's | Motivation framing | **Yes — new** |
+| Value lives in readers, not work | Pass 0 valuable-to-whom sentence | **Yes (new)** |
+| Writing process ≠ reading process | Pass 3 structural restructuring check | **Yes (new)** |
+| Clear/Organized/Persuasive/Valuable | Quality-rubric prior question | **Yes (new)** |
+| The CODE | Audience-specific vocabulary, security-blog code list | **Yes (new)** |
+| Instability vocabulary | Positive word list for intros (but, however, anomaly, inconsistent) | **Yes (new)** |
+| Stasis vs. background | Editing test for intro background blocks | **Yes (new)** |
+| Problem in readers vs. world | Vuln writeup TL;DR earns its place; required for security posts | **Yes (new)** |
+| Gap vs. error problem | Choose pressure profile; default to error for opinion posts | **Yes (new)** |
+| Don't explain: change their ideas | Pass 3 paragraph-level test | **Yes (new)** |
+| Feedback: "where do you stop seeing why this matters" | Reviewer prompt | **Yes (new)** |
+| Lit review enriches problem | Prior-art section discipline | **Yes (new)** |
+| Reader's costs, not writer's | Motivation framing | **Yes (new)** |
 | Forget the rules | (rules in this skill ARE the audience's CODE) | **Reframe** |
-| Always state a problem | (with judgment — tutorials are an exception) | Cap |
+| Always state a problem | (with judgment; tutorials are an exception) | Cap |
 | Academic dissertation apparatus | Adapt, don't port | Adapt |
 | Symbol / slogan | (already covered in how-to-speak.md §4) | Already covered |
 | Knowledge-as-consensus philosophy | Operational consequence only (write for a community) | Partial |
