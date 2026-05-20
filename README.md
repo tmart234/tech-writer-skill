@@ -21,7 +21,7 @@ See `voice/README.md` for how the core consumes that folder.
 ## Layout
 
 ```
-SKILL.md                  core: workflow, steps, the voice hook
+SKILL.md                  core: the five-pass workflow, rule-set sections, the voice hook
 references/
   writing-rules.md        core: the non-negotiable prose rules
   anti-patterns.md        core: the AI-slop catalog
