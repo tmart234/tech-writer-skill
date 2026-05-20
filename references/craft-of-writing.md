@@ -82,7 +82,7 @@ McEnerney's sharpest single distinction. Both "background" and "stasis" present 
 
 Sewell's example from the handout (*"Ever since Herodotus, historians have written about events..."*) looks like background but is stasis: the apparent stability ("settled, since antiquity") is set up so the next paragraph can destabilize it.
 
-Direct port to security writing. A post about a protocol weakness can open with what looks like background (*"DICOM's association negotiation has been the standard handshake since 1993..."*) but only earns the opening if the next sentence destabilizes (*"...and almost every implementation gets the reject path wrong."*). If the second sentence reinforces the first instead of subverting it, the opening is true background, not stasis, and the post is doing the wrong thing.
+Direct port to security writing. A post about a protocol weakness can open with what looks like background (*"OAuth 2.0 has been the standard authorization framework since 2012..."*) but only earns the opening if the next sentence destabilizes (*"...and almost every implementation gets redirect-URI validation wrong."*). If the second sentence reinforces the first instead of subverting it, the opening is true background, not stasis, and the post is doing the wrong thing.
 
 **Editing test:** for any block of "background" in the intro, ask: is this here because the reader needs it as a base for the rest of the post, or is this here so I can destabilize it next? If neither, cut it. If background, ask if it really needs to be in the intro vs. inline later. If stasis, make sure the destabilizing sentence lands hard and immediately.
 

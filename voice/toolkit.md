@@ -4,7 +4,7 @@
 
 ## How to use this file
 
-You're not picking a single voice for the whole blog. The medical-device beat profile (in SKILL.md) is the standing voice. This file is a **toolkit of moves** to pull from per post. Most posts steal from two or three of these writers, not one. Pick deliberately:
+You're not picking a single voice for the whole blog. The medical-device beat profile (in `voice/profile.md`) is the standing voice. This file is a **toolkit of moves** to pull from per post. Most posts steal from two or three of these writers, not one. Pick deliberately:
 
 1. **Pick the structural move** (how the post is built, what carries the argument). One of: Stone, Zalewski, Goodspeed, Schneier (essay), Phineas Fisher.
 2. **Pick the rhetorical register** (how the post sounds, what carries the emotion). One of: Beaumont, McAfee, The Grugq, Hutchins, Zetter.
@@ -12,7 +12,7 @@ You're not picking a single voice for the whole blog. The medical-device beat pr
 
 Two-to-three writers per post is the target. More than that and the voice splinters; one and the post sounds like a tribute act.
 
-The medical-device beat profile in SKILL.md is the floor. These moves are *additive* to it. They sharpen a specific post; they don't replace the voice.
+The medical-device beat profile in `voice/profile.md` is the floor. These moves are *additive* to it. They sharpen a specific post; they don't replace the voice.
 
 ## The taxonomy
 
@@ -47,7 +47,7 @@ A few combinations recur often enough on the medical-device beat to be worth nam
 
 ## Post-level register: Measured, Sharp, and tactical landings
 
-> The full register theory. SKILL.md carries the summary; this section carries the detail. Consult it when picking the post-level register in Pass 0 and again during the Pass 3 tactical-Sharp landing check.
+> The full register theory. `voice/profile.md` carries the summary; this section carries the detail. Consult it when picking the post-level register in Pass 0 and again during the Pass 3 tactical-Sharp landing check.
 
 **Register has two scopes: the post and the sentence.** Most posts run Measured at the post level. Sharp shows up in two different ways, and they have different earned-criteria. Don't conflate them.
 
@@ -69,5 +69,5 @@ A few combinations recur often enough on the medical-device beat to be worth nam
 
 - The structural-move pick (Stone, Zalewski, Goodspeed, Schneier-essay, Phineas Fisher) is the same decision as Step 1 (content type). Stone → vuln writeup, Schneier-essay → essay form, Goodspeed → tutorial-with-stakes, Zalewski → deep dive, Phineas Fisher → how-to with reproducibility discipline. Pick consistently.
 - The rhetorical-register pick interacts with the **Measured/Sharp register selection** in Pass 0 (see the register section above). Beaumont, Zetter, Hutchins, Woods all live comfortably in *post-level Measured*. The Grugq's compression move works in both registers; the persona doesn't. **McAfee is the canonical tactical-Sharp-landing move, not a whole-post register.** Most McAfee uses are a single defiant or apocalyptic sentence dropped into an otherwise Measured post, earned by the paragraph above, not by a Pass 0 register commitment. Whole-post McAfee is rare and needs the whole-post Sharp evidence bar. See the register section above ("tactical Sharp landings") and the Pass 3 tactical-Sharp landing check.
-- The audience-anchor pick interacts with the **multi-audience clarity test** in Step 2 (SKILL.md). Rios anchors at the biomed/clinical audience; Woods at the regulator; Fu at the researcher; Green at the cross-discipline reader who needs the primer.
-- The travelling-line discipline (The Grugq, Schneier) is the same decision as the **closer pattern** in `writing-rules.md` ("Closers" → "Catchphrase reuse"). Coin the line in the body, land it once at the close.
+- The audience-anchor pick interacts with the **multi-audience clarity test** (`voice/profile.md`). Rios anchors at the biomed/clinical audience; Woods at the regulator; Fu at the researcher; Green at the cross-discipline reader who needs the primer.
+- The travelling-line discipline (The Grugq, Schneier) is the same decision as the **closer pattern** in `references/writing-rules.md` ("Closers" → "Catchphrase reuse"). Coin the line in the body, land it once at the close.
