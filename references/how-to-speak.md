@@ -130,13 +130,13 @@ Winston says jokes can close a talk well; "thank you" cannot. In writing, the an
 | Ask a question | Rhetorical Q (max 1 heading-as-Q) | **Cap** |
 | Inspiration via passion | Voice/opinion in the prose | **Yes** |
 | Situating | Contextualize the problem | Already covered |
-| Practice with non-experts | Get out-of-subspecialty review | **Yes — new** |
+| Practice with non-experts | Get out-of-subspecialty review | **Yes (new)** |
 | Time/room/slides | n/a | **Skip** |
-| Story = 5-element teaching | Deep-dive structure | **Yes — new** |
-| Vision = problem + novelty | Opinion-post structure | **Yes — new** |
+| Story = 5-element teaching | Deep-dive structure | **Yes (new)** |
+| Vision = problem + novelty | Opinion-post structure | **Yes (new)** |
 | Symbol / slogan | Diagram / memorable phrase | **Weak / optional** |
 | Surprise | Cold open at thesis | Reinforces existing rule |
-| Salient idea | One quotable sentence | **Yes — new test** |
+| Salient idea | One quotable sentence | **Yes (new test)** |
 | End on contributions | Concrete artifact closer | Reinforces existing rule |
-| End with thank-you | (banned) | **No — already banned** |
+| End with thank-you | (banned) | **No (already banned)** |
 | End with joke | (rarely works in writing) | Caution |
