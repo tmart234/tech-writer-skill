@@ -19,7 +19,7 @@ The enemy is not a word. The enemy is **generic, risk-free, evidence-free prose 
 - **§3 Banned phrases** · 3a throat-clearing openers · 3b meta-commentary · 3c emphasis crutches · 3d closing boilerplate · 3e false profundity · 3f "not just X, but Y" · 3g reader-targeting · 3h "dive deeper" · 3i journey metaphors · 3j sycophantic openers · 3k "as of my last knowledge update"
 - **§4 Banned structural patterns** · 4a rule of three · 4b uniform sentence length · 4c hedging seesaw · 4d "not only X, but also Y" · 4e false balance · 4f binary contrasts · 4g restatement loop · 4h summary paragraphs · 4i rehash transitions · 4j "in conclusion" · 4k bullet-list padding · 4l em-dash abuse · 4m "however/moreover" pile-ups · 4n academic intro · 4o passive-voice hedging · 4p prophecy closer · 4q constant juxtaposition · 4r negative-to-positive arc
 - **§5 AI-slop smell tests:** 10 holistic checks
-- **§6 Security-specific anti-patterns** · 6a FUD without quantification · 6b vulnerability without defense · 6c theoretical-vs.-PoC-vs.-wild-vs.-KEV confusion · 6d breathless trivial findings · 6e vendor-bashing without a design principle · 6f passive threat framing · 6g missing affected versions · 6h advisory-voice copy-paste · 6i "defense in depth" as substitute for ranking · 6j security theater · 6k medical-device lazy takes · 6l "DICOM is old" throat-clear
+- **§6 Security-specific anti-patterns** · 6a FUD without quantification · 6b vulnerability without defense · 6c theoretical-vs.-PoC-vs.-wild-vs.-KEV confusion · 6d breathless trivial findings · 6e vendor-bashing without a design principle · 6f passive threat framing · 6g missing affected versions · 6h advisory-voice copy-paste · 6i "defense in depth" as substitute for ranking · 6j security theater · 6k beat-specific anti-patterns
 - **§7 Hard caps:** numerical limits with rationale
 - **§8 Example fix-ups:** 10 worked before/after rewrites
 - **§9 Mechanical verification**: the script, and the checks no script catches
@@ -46,8 +46,8 @@ For each entry below: **word → why it's a tell → replacements → bad vs. fi
 | **shed light on / illuminate** | "I have no data, but I'd like you to think I do." | "show," "prove," or supply the data. |
 | **embark on** | You are writing a blog post, not boarding a ship. | Delete the sentence and start at the verb. |
 
-**Bad:** *In this post, we'll delve into the intricacies of DICOM's C-STORE handshake and unravel how attackers navigate the protocol stack.*
-**Fixed:** *C-STORE's handshake has three bugs I can reproduce on a stock Orthanc install. Here they are.*
+**Bad:** *In this post, we'll delve into the intricacies of the OAuth token-refresh flow and unravel how attackers navigate the authorization stack.*
+**Fixed:** *The OAuth refresh flow has three bugs I can reproduce on a stock Keycloak install. Here they are.*
 
 ### 1b. The "rich tapestry" family: geography of nothing
 
@@ -56,15 +56,15 @@ These are metaphors for a location the author never visits. They exist to take u
 | Banned | Why | Replace with |
 |---|---|---|
 | **tapestry / rich tapestry** | Pure LLM decoration. ([Kobak marker list](https://www.medrxiv.org/content/10.1101/2024.05.14.24307373v1.full.pdf)) | Delete. |
-| **landscape** ("threat landscape," "evolving landscape") | Means "the set of things," which is never the interesting claim. | Name the things. "Three ransomware families targeted radiology in 2025" beats "the radiology threat landscape." |
-| **realm** | Top-5 LLM marker word ([GPTZero](https://gptzero.me/ai-vocabulary); [Matsui 2024](https://www.medrxiv.org/content/10.1101/2024.05.14.24307373v2)). | "field," or just name the field: "AppSec," "PACS security." |
+| **landscape** ("threat landscape," "evolving landscape") | Means "the set of things," which is never the interesting claim. | Name the things. "Three ransomware families targeted CI/CD pipelines in 2025" beats "the DevOps threat landscape." |
+| **realm** | Top-5 LLM marker word ([GPTZero](https://gptzero.me/ai-vocabulary); [Matsui 2024](https://www.medrxiv.org/content/10.1101/2024.05.14.24307373v2)). | "field," or just name the field: "AppSec," "cloud security." |
 | **ecosystem** | Fine when literal (npm ecosystem). Slop when figurative ("the security ecosystem"). | Name the actors: vendors, regulators, researchers, customers. |
 | **sphere / arena / space** | Same problem as landscape. "the MedTech space" = "MedTech." | Drop. |
 | **world** ("in today's world," "the world of X") | Implies universality to cover for lack of specifics. | Drop the frame; start at the claim. |
 | **domain** (non-technical sense) | OK as a technical term (Active Directory domain, problem domain). Slop as "the domain of cybersecurity." | If you mean "field," say "field"; or better, name it. |
 
-**Bad:** *In the ever-evolving landscape of medical device cybersecurity, the DICOM realm presents unique challenges.*
-**Fixed:** *Every PACS I've tested since 2019 accepts anonymous C-ECHO on port 104. That is the bug.*
+**Bad:** *In the ever-evolving landscape of cloud cybersecurity, the container realm presents unique challenges.*
+**Fixed:** *Every Kubernetes cluster I've tested since 2019 exposes the kubelet API with no authentication. That is the bug.*
 
 ### 1c. The "testament" family: load-bearing clichés
 
@@ -131,7 +131,7 @@ These nouns pretend a claim is self-evidently important. They are always replace
 | **pivotal** | Top-10 LLM marker; appears in ~15% of 2024 PMC papers ([Zhang et al., 2026](https://link.springer.com/article/10.1007/s11192-026-05601-5)). | "important"; or explain *why*. Usually just delete. |
 | **paramount** | Pure LLM. | Delete. If something is critical, prove it. |
 | **crucial / crucially** | Overused flag word. If everything is crucial, nothing is. | Delete; if the point survives without it, the word was padding. |
-| **vital** | Same. | Delete or specify: "required for FDA 510(k) clearance." |
+| **vital** | Same. | Delete or specify: "required for PCI-DSS Level 1 compliance." |
 | **essential** | Same. | Same. |
 | **critical** | OK in security when literal (CVE severity Critical, critical path). Slop when rhetorical ("it's critical to understand..."). | Reserve for CVSS 9.0+ or literal criticality. |
 | **indispensable** | Never true. | Delete. |
@@ -463,14 +463,14 @@ The LLM default intro is: attention-grabbing generality → 2–3 paragraphs of 
 
 "Mistakes were made." "Sensitive data was exposed." "It was determined that..." Name the actor when you can. Passive is fine when the actor is unknown or irrelevant ("RSA was published in 1977"), but LLMs use passive to avoid naming vendors, teams, or their own opinions. That's cowardice.
 
-Security-specific case: if a vendor screwed up, **name the vendor**. "Siemens syngo.plaza accepted unauthenticated DICOM queries" is journalism. "Unauthenticated queries were accepted by a leading medical imaging platform" is cover-your-ass slop.
+Security-specific case: if a vendor screwed up, **name the vendor**. "GitLab's CI runner accepted unauthenticated API calls" is journalism. "Unauthenticated calls were accepted by a leading DevOps platform" is cover-your-ass slop.
 
 ### 4p. The prophecy closer
 
 The closer that dodges every banned word in §3d and §4j and still reads like a LinkedIn post. The shape: *"The [entities] who will [thrive / succeed / win] in this [era] are the ones who [action]."*
 
 - "The teams that will survive the next wave of ransomware are the ones who treat backups as a security control, not an IT chore."
-- "The hospitals that thrive in the post-quantum era will be the ones that started their crypto inventory today."
+- "The banks that thrive in the post-quantum era will be the ones that started their crypto inventory today."
 - "The engineers who win in the age of AI are the ones who learn to ask better questions."
 
 No Tier-1 word, no "in conclusion," no "stay vigilant": the word-level and phrase-level passes wave it through. The tell is structural: a future-tense sorting of an unnamed group into winners and losers, conditioned on a vague virtue, with no named loser, no named winner, no number, no date. It is the §3d closing exhortation wearing a prophecy costume, and it counts against the zero-closing-exhortation cap in §7.
@@ -516,13 +516,13 @@ Pass these even if §1–§4 are clean. These are Turing-test-for-slop questions
 1. **Is every paragraph the same length?** LLM default is 4–6 sentences per paragraph, every paragraph. Real writers have 1-sentence paragraphs for emphasis. And 12-sentence paragraphs when the argument needs it.
 2. **Is every sentence declarative?** No questions, no commands, no fragments. A technical post with zero questions and zero fragments over 1,500 words is suspect.
 3. **Are there no specific numbers, names, dates, or CVEs?** Real security writing is dense with CVE IDs, version numbers, port numbers, byte offsets, dates, vendor names. If the post could be about any vendor and any CVE, it is slop.
-4. **No code, no diagrams, no measurements?** In application-security or DICOM writing, the absence of at least one code block, `tcpdump` output, screenshot, or measurement is a bad sign.
+4. **No code, no diagrams, no measurements?** In application-security or systems writing, the absence of at least one code block, `tcpdump` output, screenshot, or measurement is a bad sign.
 5. **No dead ends, no "I was wrong about X"?** Real work includes failure. LLMs never admit they were wrong because they have no stakes. If the post never says "I tried Y first and it didn't work" or "I was wrong to assume Z," it is probably synthetic.
-6. **No concrete scene?** "At 3am on a Tuesday the PACS started alerting on C-STORE timeouts" beats "incidents can occur at unexpected times." Name the time, the tool, the port, the building.
+6. **No concrete scene?** "At 3am on a Tuesday the load balancer started returning 502s on every POST" beats "incidents can occur at unexpected times." Name the time, the tool, the port, the building.
 7. **No unfashionable opinions?** LLM default is the median of the training corpus. If your post agrees with every vendor, every framework, every CISA advisory, and every OWASP cheat sheet, you haven't said anything. Name one thing the consensus gets wrong.
 8. **Perfectly even-handed? No vendor named, no tool ranked, no preference stated?** Same problem.
-9. **The practitioner test:** would someone who actually does this job bother writing this? If the post is 1,200 words saying "DICOM is a protocol used in medical imaging and has security implications," no practitioner would bother. Slop.
-10. **The grep test:** grep the post for one of your author's actual recurring obsessions (e.g. TLS in DICOM, 510(k) vs. PMA, CVSS mis-scoring, CWE overlap). If none of your pet topics appear, the post isn't from you.
+9. **The practitioner test:** would someone who actually does this job bother writing this? If the post is 1,200 words saying "SQL injection lets attackers inject database queries and has security implications," no practitioner would bother. Slop.
+10. **The grep test:** grep the post for one of your actual recurring obsessions (e.g. CVSS mis-scoring, the gap between a PoC and in-the-wild exploitation, CWE overlap). If none of your pet topics appear, the post isn't from you.
 
 ---
 
@@ -532,7 +532,7 @@ Security writing has its own failure modes on top of everything above.
 
 ### 6a. FUD without quantification
 
-"Devastating," "catastrophic," "crippling," "massive." If a breach is catastrophic, say whose catastrophe and in what units: dollars, records, downtime hours, patient-safety events. The Fortinet/CTA responsible-disclosure guidance explicitly flags the industry's FUD problem: high CVE counts do not equal poor vendor practice, and weaponizing vuln counts is marketing, not engineering ([Fortinet/CTA, 2024](https://www.fortinet.com/blog/psirt-blogs/advancing-responsible-disclosure-efforts-a-qa-with-michael-daniel-of-cta)).
+"Devastating," "catastrophic," "crippling," "massive." If a breach is catastrophic, say whose catastrophe and in what units: dollars, records, downtime hours, SLA breaches. The Fortinet/CTA responsible-disclosure guidance explicitly flags the industry's FUD problem: high CVE counts do not equal poor vendor practice, and weaponizing vuln counts is marketing, not engineering ([Fortinet/CTA, 2024](https://www.fortinet.com/blog/psirt-blogs/advancing-responsible-disclosure-efforts-a-qa-with-michael-daniel-of-cta)).
 
 **Rule:** no severity adjective without a number within 20 words of it.
 
@@ -544,7 +544,7 @@ If you describe how to exploit X, describe (at minimum) what to do about X. Not 
 
 "Attackers can now..." when the CVE is a 6.1 medium with no known exploitation in the wild is dishonest. If CISA KEV doesn't list it, don't write as if it did. Use precise language:
 
-- *Theoretical*: "a malformed PDU can crash the parser."
+- *Theoretical*: "a malformed packet can crash the parser."
 - *PoC exists*: "I have a working PoC; here it is."
 - *In the wild*: "GreyNoise shows 1,400 scanners hitting this since [date]."
 - *KEV*: "CISA added this to KEV on [date]; federal agencies have 21 days."
@@ -557,7 +557,7 @@ Reflected XSS on a marketing page is not a story. Missing `X-Content-Type-Option
 
 ### 6e. Vendor-bashing without naming the design principle violated
 
-"Vendor X is bad" is not a post. "Vendor X ships PACS with hardcoded DICOM AE titles and a default TLS cert shared across installations, violating [NIST SP 800-57 §5.1] on per-deployment key material" is a post. Name the principle. Cite the document. This is the Krebs / Schneier / tptacek mode: attack design choices, not brands.
+"Vendor X is bad" is not a post. "Vendor X ships its appliance with a default TLS private key shared across every installation, violating NIST SP 800-57 §5.1 on per-deployment key material" is a post. Name the principle. Cite the document. This is the Krebs / Schneier / tptacek mode: attack design choices, not brands.
 
 ### 6f. "Hackers can now..." passive threat framing
 
@@ -581,19 +581,15 @@ If a paragraph reads like the vendor's KB article, it *is* the vendor's KB artic
 
 Recommending 60-day password rotation in 2026. Recommending AV signature vendors by name without data. Treating compliance checkboxes as security. If the post reads like an auditor wrote it, the author has been captured.
 
-### 6k. Medical-device-specific: the "hospitals are behind" lazy take
+### 6k. Beat-specific anti-patterns
 
-Every medical-device post does not need the "hospitals run Windows XP" paragraph. If you're making that observation, tie it to the specific economic and regulatory reason (FDA re-certification cost, 10-year device lifecycle, MDS2 gaps) and name a number. Otherwise cut it.
-
-### 6l. DICOM-specific: the "DICOM is old" throat-clear
-
-DICOM is from 1993. Every reader knows. Start at the bug.
+Failure modes tied to one domain rather than to security writing in general (a lazy take that recurs in a particular field, a throat-clear specific to one protocol or product) live in a voice profile when one is present. See `voice/beat-notes.md`. The generic core stops at §6j.
 
 ---
 
 ## 7. Hard caps (numbers)
 
-Defensible, evidence-based, not arbitrary. These are tuned for the author's voice (principal engineer, unflinching, technical). They would be too loose for a newsletter and too tight for a textbook.
+Defensible, evidence-based, not arbitrary. These are tuned for a sharp, technical, opinionated voice. They would be too loose for a newsletter and too tight for a textbook. A voice profile may override them.
 
 | Metric | Cap | Rationale |
 |---|---|---|
@@ -624,24 +620,24 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 ### Fix-up 1: Throat-clearing intro
 
 **Before:**
-> In today's ever-evolving cybersecurity landscape, the realm of medical device security presents unique and intricate challenges. As we navigate the complexities of an increasingly connected healthcare ecosystem, it is crucial to understand the pivotal role that the DICOM protocol plays. This article will delve into the nuances of securing DICOM in modern clinical environments.
+> In today's ever-evolving cybersecurity landscape, the realm of API security presents unique and intricate challenges. As we navigate the complexities of an increasingly connected software ecosystem, it is crucial to understand the pivotal role that authentication plays. This article will delve into the nuances of securing REST APIs in modern environments.
 
 **After:**
-> DICOM C-STORE has a default port (104), a default authentication posture (none), and a default trust model (any AE title goes). Every hospital I've tested since 2019 has at least one scanner exposing it. Here's how to find yours.
+> Most REST APIs ship with three default weaknesses: tokens that never expire, error responses that leak stack traces, and CORS set to `*`. Every service I've audited this year had at least one. Here's how to find yours.
 
-**What changed:** cut 49 words of throat-clearing; opened with three specific defaults and a testable claim; ended the paragraph on a call to the reader's own environment, not a vendor brochure.
+**What changed:** cut 47 words of throat-clearing; opened with three specific defaults and a testable claim; ended the paragraph on a call to the reader's own environment, not a vendor brochure.
 
 ---
 
 ### Fix-up 2: Vendor-neutral FUD
 
 **Before:**
-> Hackers can now leverage sophisticated techniques to exploit critical vulnerabilities in a leading medical imaging platform, potentially leading to devastating consequences for patient safety.
+> Hackers can now leverage sophisticated techniques to exploit critical vulnerabilities in a leading application server, potentially leading to devastating consequences for enterprise security.
 
 **After:**
-> Siemens syngo.via VB60 (advisory SSA-123456, CVSS 9.8) accepts unauthenticated DICOM queries on port 104. In a lab reproduction, I pulled 1,200 study headers from a stock install in 90 seconds. Patch VB60A-HF04 (December 2025) closes it; VB50 and earlier are EOL.
+> Apache Tomcat 9.0.0 through 9.0.85 (CVE-2024-XXXXX, CVSS 9.8) deserializes untrusted session data when `PersistentManager` is enabled. In a lab reproduction, I got remote code execution on a stock install in under a minute. Patch 9.0.86 (March 2025) closes it; 8.5.x is EOL and will not be fixed.
 
-**What changed:** named the vendor, version, advisory ID, CVSS score, port, reproduction result, patch level, and EOL status. Removed "hackers," "leverage," "sophisticated," "critical" (rhetorical), "potentially," "devastating." Passive voice gone.
+**What changed:** named the product, version range, CVE ID, CVSS score, the precondition, the reproduction result, patch level, and EOL status. Removed "hackers," "leverage," "sophisticated," "critical" (rhetorical), "potentially," "devastating." Passive voice gone.
 
 ---
 
@@ -713,12 +709,12 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 ### Fix-up 8: "Not just X, but Y" plus tricolon
 
 **Before:**
-> DICOM isn't just a protocol — it's an ecosystem, a language, and a lifeline for modern radiology. It's not just about moving images; it's about enabling diagnosis, collaboration, and care.
+> Kubernetes isn't just a container orchestrator — it's an ecosystem, a platform, and a foundation for modern infrastructure. It's not just about scheduling pods; it's about enabling scale, resilience, and velocity.
 
 **After:**
-> DICOM is a 1993 wire format that hospitals run over flat networks because PACS vendors never implemented TLS properly. Treat it as plaintext on an untrusted LAN and you'll get the threat model right.
+> Kubernetes is a control loop that reconciles desired state against actual state. Default installs run workloads as root and expose the kubelet's read-only port. Treat the cluster as hostile multi-tenant from day one and you'll get the threat model right.
 
-**What changed:** deleted two "not just X" constructions and two tricolons; replaced with a dated technical fact, a specific vendor failure, and a threat-modeling instruction.
+**What changed:** deleted two "not just X" constructions and two tricolons; replaced with a precise definition, a specific default weakness, and a threat-modeling instruction.
 
 ---
 
@@ -757,7 +753,7 @@ Two kinds of check live in this file. Some are countable, and a script can run t
 The script's Tier-1 list is a high-signal subset, not the full §1 catalog, so a clean run does not retire the §1 word-level pass. The script also assumes a blog draft as input. Run it against a skill reference file and the Tier-1 and phrase checks will flag words the file legitimately quotes. Only the em-dash count is meaningful as a regression gate on the skill's own prose:
 
 ```bash
-for f in SKILL.md references/*.md; do
+for f in SKILL.md references/*.md voice/*.md; do
   printf '%s: ' "$f"
   echo "$(grep -o '—' "$f" | wc -l) em dashes, $(wc -w < "$f") words"
 done

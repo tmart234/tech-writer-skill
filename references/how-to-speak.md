@@ -16,8 +16,8 @@ Winston: *"Your success in life will be determined largely by your ability to sp
 
 Tell the reader what they'll know by the end. Not what the post is "about", but what they'll be able to *do* or *decide* afterward. Reinforces the "Introductions" rules in `writing-rules.md`: replace "this article will discuss..." with the specific knowledge or capability the reader walks away with.
 
-**Bad:** *This post explores DICOM security.*
-**Better:** *By the end you'll have a one-line nmap command that finds every C-ECHO-listening port on your network and tells you which ones accept anonymous association.*
+**Bad:** *This post explores API security.*
+**Better:** *By the end you'll have a one-line `nmap` command that finds every unauthenticated Redis instance on your network.*
 
 The promise is also a contract: if the post doesn't deliver it, every reader notices.
 
@@ -72,7 +72,7 @@ If a draft fails (a), it's solving a problem nobody has. If it fails (b), it's a
 
 ### 7. Practice with non-experts
 
-Winston: practice your talk with an audience that **isn't** expert in your work and is unafraid to criticize. The same rule applies to technical writing: get a reader from one or two specialties over (a backend engineer reading your DICOM post; a generalist appsec engineer reading your kernel post). Subspecialty experts will paper over your unclear paragraphs from context they already have. Non-experts can't, so they surface them.
+Winston: practice your talk with an audience that **isn't** expert in your work and is unafraid to criticize. The same rule applies to technical writing: get a reader from one or two specialties over (a backend engineer reading your kernel post; a generalist appsec engineer reading your cryptography post). Subspecialty experts will paper over your unclear paragraphs from context they already have. Non-experts can't, so they surface them.
 
 This matters most for the **why** sentences, the load-bearing claims about why a design is wrong or a vulnerability matters. Non-experts catch hand-waving that experts auto-fill.
 
@@ -86,7 +86,7 @@ Winston on closing slides: don't end with "Conclusions," "Questions?," "Thank Yo
 Winston's positive replacements adapted for writing:
 
 - **Contributions closer**: end on the specific, concrete thing the post contributed: a tool, a measurement, a CVE, a framework. *"The fuzzer is at github.com/x/y. It found the three CVEs above; PRs welcome on the parser harness."*
-- **Call-to-action closer**: end on the one command, grep, or change the reader should run today. Concrete, not exhortatory. *"Run `grep -r 'AET=ANY' /etc/orthanc/`. If anything matches, you're vulnerable."*
+- **Call-to-action closer**: end on the one command, grep, or change the reader should run today. Concrete, not exhortatory. *"Run `grep -rn 'verify=False' .` across your codebase. If anything matches, you're disabling TLS verification."*
 - **Sharpest-sentence closer**: end on the post's strongest single sentence, usually the one you'd pick as the salient idea (§4 above). Stated once, no amplification.
 
 Never the **"thank you" closer**, which Winston flags as implying "the audience stayed out of politeness." Same energy in writing: "thanks for reading" implies the post wasn't worth the time on its own.
