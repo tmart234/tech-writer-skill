@@ -386,7 +386,7 @@ LLM prose drifts toward a median sentence length of 18–22 words with low varia
 
 GPTZero's "burstiness" metric is explicitly this ([GPTZero FAQ](https://gptzero.me/)). Target: **sentence-length standard deviation ≥ 8 words** within any paragraph of 4+ sentences. If every sentence in a paragraph is 15–22 words long, rewrite with some short punches and at least one long sentence.
 
-**The short-side tic.** The metronome runs both ways. A run of clipped sub-five-word fragments (*"This is a choice. It was always a choice. They knew."*) is its own uniform-length tell, and staccato overused stops delivering contempt and starts reading as a verbal tic. Cap: no more than three sub-five-word sentences back to back. (See `SKILL.md` → "Voice and mechanics" → staccato.)
+**The short-side tic.** The metronome runs both ways. A run of clipped sub-five-word fragments (*"This is a choice. It was always a choice. They knew."*) is its own uniform-length tell, and staccato overused stops delivering contempt and starts reading as a verbal tic. Cap: no more than three sub-five-word sentences back to back. (See `writing-rules.md` → "Voice and mechanics" → staccato.)
 
 ### 4c. The hedging seesaw
 
@@ -475,7 +475,7 @@ The closer that dodges every banned word in §3d and §4j and still reads like a
 
 No Tier-1 word, no "in conclusion," no "stay vigilant": the word-level and phrase-level passes wave it through. The tell is structural: a future-tense sorting of an unnamed group into winners and losers, conditioned on a vague virtue, with no named loser, no named winner, no number, no date. It is the §3d closing exhortation wearing a prophecy costume, and it counts against the zero-closing-exhortation cap in §7.
 
-**Rule:** ban the structure, not just the vocabulary. Grep every closer for the shapes *"who will [verb],"* *"the ones who,"* and *"will [thrive / succeed / win / survive] in [the era / this age / the world of]."* If the final paragraph sorts an unnamed group into a future outcome based on an abstract behavior, cut it. End on the last substantive claim, or use one of the three earned closers (prescription-or-refusal, catchphrase reuse, specific call-to-action) from the skill's "Closers" section. The prophecy closer is none of the three: it prescribes nothing specific, reuses no coined name, and asks for no concrete action. It just flatters the reader that they might be one of the winners.
+**Rule:** ban the structure, not just the vocabulary. Grep every closer for the shapes *"who will [verb],"* *"the ones who,"* and *"will [thrive / succeed / win / survive] in [the era / this age / the world of]."* If the final paragraph sorts an unnamed group into a future outcome based on an abstract behavior, cut it. End on the last substantive claim, or use one of the three earned closers (prescription-or-refusal, catchphrase reuse, specific call-to-action) from the "Closers" section of `writing-rules.md`. The prophecy closer is none of the three: it prescribes nothing specific, reuses no coined name, and asks for no concrete action. It just flatters the reader that they might be one of the winners.
 
 ### 4q. Constant juxtaposition (the antithesis reflex)
 

@@ -14,7 +14,7 @@ Winston: *"Your success in life will be determined largely by your ability to sp
 
 ### 1. Open with a promise
 
-Tell the reader what they'll know by the end. Not what the post is "about", but what they'll be able to *do* or *decide* afterward. Reinforces SKILL.md §"Introductions": replace "this article will discuss..." with the specific knowledge or capability the reader walks away with.
+Tell the reader what they'll know by the end. Not what the post is "about", but what they'll be able to *do* or *decide* afterward. Reinforces the "Introductions" rules in `writing-rules.md`: replace "this article will discuss..." with the specific knowledge or capability the reader walks away with.
 
 **Bad:** *This post explores DICOM security.*
 **Better:** *By the end you'll have a one-line nmap command that finds every C-ECHO-listening port on your network and tells you which ones accept anonymous association.*
@@ -80,7 +80,7 @@ This matters most for the **why** sentences, the load-bearing claims about why a
 
 Winston on closing slides: don't end with "Conclusions," "Questions?," "Thank You," or a URL. Use **Contributions** (what you added) or a **call to action** or a **salute** (express what the work meant). The same rules port to writing closers. Cross-references in this skill:
 
-- `SKILL.md` §"Don't repeat yourself": no recap closing paragraphs.
+- `writing-rules.md` §"Don't repeat yourself": no recap closing paragraphs.
 - `anti-patterns.md` §3d (closing boilerplate), §4j (announcing the conclusion), §7 (zero closing exhortations).
 
 Winston's positive replacements adapted for writing:
