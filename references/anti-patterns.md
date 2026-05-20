@@ -14,18 +14,19 @@ The enemy is not a word. The enemy is **generic, risk-free, evidence-free prose 
 
 ## Contents
 
-- **§1 Tier 1 banned words — always replace** · 1a "delve" family · 1b "tapestry/landscape/realm" · 1c "testament/cornerstone" · 1d corporate verbs (leverage/utilize) · 1e empty adjectives (robust/seamless) · 1f "pivotal/crucial/vital" · 1g abstraction family (paradigm/framework) · 1h profundity markers (fundamentally/at its core) · 1i flattery/hype · 1j consensus-signaling (undoubtedly/clearly) · 1k 2024–2026 AI tells (underscore/showcase/meticulous)
-- **§2 Tier 2 watchlist** — flag when 3+ cluster in one post
+- **§1 Tier 1 banned words: always replace** · 1a "delve" family · 1b "tapestry/landscape/realm" · 1c "testament/cornerstone" · 1d corporate verbs (leverage/utilize) · 1e empty adjectives (robust/seamless) · 1f "pivotal/crucial/vital" · 1g abstraction family (paradigm/framework) · 1h profundity markers (fundamentally/at its core) · 1i flattery/hype · 1j consensus-signaling (undoubtedly/clearly) · 1k 2024–2026 AI tells (underscore/showcase/meticulous)
+- **§2 Tier 2 watchlist:** flag when 3+ cluster in one post
 - **§3 Banned phrases** · 3a throat-clearing openers · 3b meta-commentary · 3c emphasis crutches · 3d closing boilerplate · 3e false profundity · 3f "not just X, but Y" · 3g reader-targeting · 3h "dive deeper" · 3i journey metaphors · 3j sycophantic openers · 3k "as of my last knowledge update"
-- **§4 Banned structural patterns** · 4a rule of three · 4b uniform sentence length · 4c hedging seesaw · 4d "not only X, but also Y" · 4e false balance · 4f binary contrasts · 4g restatement loop · 4h summary paragraphs · 4i rehash transitions · 4j "in conclusion" · 4k bullet-list padding · 4l em-dash abuse · 4m "however/moreover" pile-ups · 4n academic intro · 4o passive-voice hedging · 4p prophecy closer
-- **§5 AI-slop smell tests** — 10 holistic checks
+- **§4 Banned structural patterns** · 4a rule of three · 4b uniform sentence length · 4c hedging seesaw · 4d "not only X, but also Y" · 4e false balance · 4f binary contrasts · 4g restatement loop · 4h summary paragraphs · 4i rehash transitions · 4j "in conclusion" · 4k bullet-list padding · 4l em-dash abuse · 4m "however/moreover" pile-ups · 4n academic intro · 4o passive-voice hedging · 4p prophecy closer · 4q constant juxtaposition · 4r negative-to-positive arc
+- **§5 AI-slop smell tests:** 10 holistic checks
 - **§6 Security-specific anti-patterns** · 6a FUD without quantification · 6b vulnerability without defense · 6c theoretical-vs.-PoC-vs.-wild-vs.-KEV confusion · 6d breathless trivial findings · 6e vendor-bashing without a design principle · 6f passive threat framing · 6g missing affected versions · 6h advisory-voice copy-paste · 6i "defense in depth" as substitute for ranking · 6j security theater · 6k medical-device lazy takes · 6l "DICOM is old" throat-clear
-- **§7 Hard caps** — numerical limits with rationale
-- **§8 Example fix-ups** — 10 worked before/after rewrites
+- **§7 Hard caps:** numerical limits with rationale
+- **§8 Example fix-ups:** 10 worked before/after rewrites
+- **§9 Mechanical verification**: the script, and the checks no script catches
 
 ---
 
-## 1. Tier 1 banned words — always replace
+## 1. Tier 1 banned words: always replace
 
 These words are LLM tells with statistical backing. In the two largest studies to date, `delve` grew ~1,500% in PubMed abstracts between 2022 and 2024, `underscore` grew ~1,000%, `intricate` ~700%, and `meticulous` ~800% — with `delve` jumping from roughly 0.5 to 7.9 mentions per 1,000 papers in a single year ([Kobak et al., *Science Advances*, 2025](https://www.science.org/doi/10.1126/sciadv.adt3813); [Zhang et al., *Scientometrics*, 2026](https://link.springer.com/article/10.1007/s11192-026-05601-5); [Shapira, 2024](https://pshapira.net/2024/03/31/delving-into-delve/)). Juzek & Ward at FSU traced the overuse to RLHF feedback pipelines, not training data — i.e. humans rating model outputs preferred these words, so the models learned to produce them ([Juzek & Ward, arXiv:2412.11385](https://arxiv.org/html/2508.01930v1)).
 
@@ -33,7 +34,7 @@ Two-thirds of the excess 2024 "style" words were verbs; about a fifth were adjec
 
 For each entry below: **word → why it's a tell → replacements → bad vs. fixed**.
 
-### 1a. The "delve" family — false intellectual effort
+### 1a. The "delve" family: false intellectual effort
 
 | Banned | Why it's a tell | Replace with |
 |---|---|---|
@@ -48,7 +49,7 @@ For each entry below: **word → why it's a tell → replacements → bad vs. fi
 **Bad:** *In this post, we'll delve into the intricacies of DICOM's C-STORE handshake and unravel how attackers navigate the protocol stack.*
 **Fixed:** *C-STORE's handshake has three bugs I can reproduce on a stock Orthanc install. Here they are.*
 
-### 1b. The "rich tapestry" family — geography of nothing
+### 1b. The "rich tapestry" family: geography of nothing
 
 These are metaphors for a location the author never visits. They exist to take up space where a noun should be.
 
@@ -65,7 +66,7 @@ These are metaphors for a location the author never visits. They exist to take u
 **Bad:** *In the ever-evolving landscape of medical device cybersecurity, the DICOM realm presents unique challenges.*
 **Fixed:** *Every PACS I've tested since 2019 accepts anonymous C-ECHO on port 104. That is the bug.*
 
-### 1c. The "testament" family — load-bearing clichés
+### 1c. The "testament" family: load-bearing clichés
 
 These nouns pretend a claim is self-evidently important. They are always replaceable by the actual reason.
 
@@ -79,7 +80,7 @@ These nouns pretend a claim is self-evidently important. They are always replace
 **Bad:** *TLS is the cornerstone of modern web security, a testament to decades of cryptographic research.*
 **Fixed:** *TLS 1.3 removed RSA key exchange, CBC modes, and renegotiation — three of the four most common interception bugs from 1.2.*
 
-### 1d. The corporate verb family — motion without work
+### 1d. The corporate verb family: motion without work
 
 | Banned | Why | Replace with |
 |---|---|---|
@@ -100,7 +101,7 @@ These nouns pretend a claim is self-evidently important. They are always replace
 **Bad:** *We leveraged static analysis to empower developers to unlock secure coding patterns.*
 **Fixed:** *We ran Semgrep with a custom ruleset. It caught 37 of the 41 known SQLi patterns in our corpus. Developers fixed 34 in one sprint.*
 
-### 1e. The empty adjective family — adjectives that modify nothing
+### 1e. The empty adjective family: adjectives that modify nothing
 
 | Banned | Why | Replace with |
 |---|---|---|
@@ -123,7 +124,7 @@ These nouns pretend a claim is self-evidently important. They are always replace
 
 **The "nuanced" tell points at a bigger failure than one word.** "Nuanced" is the vocabulary symptom; the disease is a draft laundered into generic-AI shape — every quirk sanded off, every hot take hedged into neutrality, every weird tangent cut for "flow." The author's job is the opposite: get the quirks, the hot takes, and the "I tried this and it was stupid" moments onto the page. A draft with zero personal opinions, zero asides, and zero dead ends can pass every word-level, phrase-level, and structural check in this file and still be slop, because it has been homogenized — it reads like the median of the training corpus, which is exactly the failure §5.7 and §5.5 are built to catch. So make "did the author show up?" a thing you check, not a vibe you hope for: point at the sentence only this author, with this specific hands-on experience, would have written. If there isn't one, the draft isn't done — it's been averaged.
 
-### 1f. The "pivotal" family — importance inflation
+### 1f. The "pivotal" family: importance inflation
 
 | Banned | Why | Replace with |
 |---|---|---|
@@ -141,7 +142,7 @@ These nouns pretend a claim is self-evidently important. They are always replace
 **Bad:** *It is absolutely critical to understand the pivotal role of input validation in this essential security paradigm.*
 **Fixed:** *The parser trusts the Content-Length header. Send a larger body and it overflows. Here's the PoC.*
 
-### 1g. The abstraction family — "paradigm" when you mean "way"
+### 1g. The abstraction family: "paradigm" when you mean "way"
 
 These are legitimate technical words being used as generic filler. Flag whenever they could be replaced by a simpler noun without loss.
 
@@ -158,7 +159,7 @@ These are legitimate technical words being used as generic filler. Flag whenever
 
 Rule: **if the sentence still makes sense with "way" swapped in, use "way." Or restructure.**
 
-### 1h. The profundity family — false depth markers
+### 1h. The profundity family: false depth markers
 
 | Banned | Why | Replace with |
 |---|---|---|
@@ -171,7 +172,7 @@ Rule: **if the sentence still makes sense with "way" swapped in, use "way." Or r
 | **in essence** | See "essentially." | Delete. |
 | **ultimately** | Often throat-clearing. | Delete. |
 
-### 1i. The flattery / hype family — the reader isn't stupid
+### 1i. The flattery / hype family: the reader isn't stupid
 
 | Banned | Why | Replace with |
 |---|---|---|
@@ -188,7 +189,7 @@ Rule: **if the sentence still makes sense with "way" swapped in, use "way." Or r
 | **exciting** | See "fascinating." | Delete. |
 | **powerful** | See §1e. | Delete. |
 
-### 1j. The consensus-signaling family — begging
+### 1j. The consensus-signaling family: begging
 
 Undoubtedly a tell. (Pun intended.) These words pressure the reader into agreement instead of earning it.
 
@@ -239,7 +240,7 @@ Marker words with statistically significant excess usage post-ChatGPT, from [Kob
 
 ---
 
-## 2. Tier 2 watchlist — flag when clustered
+## 2. Tier 2 watchlist: flag when clustered
 
 These are fine in isolation. They belong to ordinary English. But LLMs reach for them more than humans do, and **three or more in one 800-word post is slop, regardless of individual defensibility**.
 
@@ -274,7 +275,7 @@ Count these against a cap of **≤ 2 per 1,000 words per word**, and **≤ 6 tot
 
 ---
 
-## 3. Banned phrases — always remove
+## 3. Banned phrases: always remove
 
 ### 3a. Throat-clearing openers
 
@@ -294,7 +295,7 @@ The reader arrived. They don't need a runway.
 
 GPTZero's top AI-phrase list is led by exactly this kind of throat-clearing: *"today's digital age," "despite facing," "expressed excitement"* ([EdScoop 2024](https://edscoop.com/gptzero-common-ai-words-detection-education-2024/)).
 
-### 3b. Meta-commentary — stop narrating the essay
+### 3b. Meta-commentary: stop narrating the essay
 
 | Banned | Fix |
 |---|---|
@@ -379,7 +380,7 @@ Churchill's tricolons ("blood, toil, tears and sweat" — which is actually four
 
 **Rule:** scan for tricolons. Keep at most one per 500 words. Break the rest into pairs, or single terms, or actual enumerated lists. If you have three real things, consider four or two.
 
-### 4b. Uniform sentence length — the metronome
+### 4b. Uniform sentence length: the metronome
 
 LLM prose drifts toward a median sentence length of 18–22 words with low variance. Human prose jumps: 4-word sentences. Then 30-word sentences that double back on themselves. Then a single clause.
 
@@ -476,9 +477,39 @@ No Tier-1 word, no "in conclusion," no "stay vigilant" — so the word-level and
 
 **Rule:** ban the structure, not just the vocabulary. Grep every closer for the shapes *"who will [verb],"* *"the ones who,"* and *"will [thrive / succeed / win / survive] in [the era / this age / the world of]."* If the final paragraph sorts an unnamed group into a future outcome based on an abstract behavior, cut it. End on the last substantive claim, or use one of the three earned closers — prescription-or-refusal, catchphrase reuse, specific call-to-action — from the skill's "Closers" section. The prophecy closer is none of the three: it prescribes nothing specific, reuses no coined name, and asks for no concrete action. It just flatters the reader that they might be one of the winners.
 
+### 4q. Constant juxtaposition (the antithesis reflex)
+
+Contrast is a real tool, and this entry is not a ban on it. The slop is contrast used as the *default rhythm of thought*: every key sentence built as two halves set against each other, every paragraph pivoting on a "but."
+
+The sentence-level shape is antithesis. "It's not about the tool, it's about the mindset." "Less a protocol, more a liability." "X isn't evolving; it's accelerating." Variants the other entries miss: chiasmus ("we shape our tools and our tools shape us"), the "less X, more Y" reframe, and the em-dash pivot ("the fix is simple, but simple isn't easy").
+
+Why it's a tell: the antithesis carries the *cadence* of an insight. Setup, pivot, landing. The reader feels a point arrive even when the contrast only separates a thing from a vaguer or strawer version of itself. The structure manufactures the sensation of depth; no information moved.
+
+§3f (`not just X, but Y`), §4d (`not only X`), §4f (binary "many think X, but actually Y"), and §4c (the hedging seesaw) are specific instances of this reflex. This entry is the umbrella: the *rhythm*, not the phrase. A draft can pass all four of those checks and still pivot on opposition in every paragraph.
+
+**When it earns its place.** A juxtaposition is legitimate when it separates two *specific, named* things the reader could genuinely confuse, on a stated axis. That is the skill's "fence off your idea" move: claim C, not C-prime, and here is the axis. A real juxtaposition carries information; it tells the reader which of two concrete things is meant. Keep those. The slop version separates a thing from a strawman or from a blurrier copy of itself, which tells the reader nothing.
+
+**The test.** For each contrast, ask whether it separates two specific things or a thing from a vaguer version of itself. Cut the second kind, or replace it with the plain assertion. Then count: if most key sentences in a section turn on opposition, the rhythm itself is the tell even when each contrast is individually defensible. Break the run. Most claims are assertions, not contrasts. Say the thing.
+
+**Cap:** at most one antithesis-driven sentence per 200 words, and never two consecutive paragraphs whose main point is a contrast.
+
+### 4r. The negative-to-positive arc (mandatory uplift)
+
+The §4q reflex stretched from the sentence to the whole document. The shape: open on the problem, the risk, the bad news; close on reassurance, a path forward, "but it's fixable." Concession, then uplift.
+
+This is not a ban on ending positive. If the evidence genuinely supports optimism, if there is a real fix and you have shown it works, end there. The slop is *structural* uplift: the redemptive turn that arrives regardless of what the evidence says.
+
+Why AI does it: RLHF rewards endings that feel resolved and non-threatening. A draft that ends grim scores lower than one that ends on hope, so the model learned never to leave the reader in discomfort. The ending is then decided by *training*, not by *evidence*. When the body does not support the optimism, the uplift is dishonesty with a bow on it.
+
+It shows up at two scales. Whole-post: a grim intro and a hopeful closer whose mood the body never earned. Section-level: every section that names a danger neutralizes it before the next heading, so no section is ever allowed to end on the danger. §4p (the prophecy closer) and §3d (closing boilerplate) are the closer-shaped instances; this entry is the broader arc, the pull across the whole piece toward ending brighter than it started.
+
+**The test.** Would the ending change if the evidence were worse? If the uplift would survive a bad result unchanged, it is structural, not earned. Cut it, and let the ending follow the evidence: if the situation is bad, end on the bad. Schneier's prescription-or-refusal closer ends *resolved* but not *comforting*; "smarter regulation versus stupider regulation" is a choice, not a reassurance. That is the model. A section is also allowed to end on the danger. The obligation to describe defenses (§6b) is satisfied across the post, not by stapling a reassurance onto every paragraph.
+
+**Cap:** at most one earned uplift turn per post, and only when the body's evidence produces it.
+
 ---
 
-## 5. AI-slop smell tests — holistic
+## 5. AI-slop smell tests: holistic
 
 Pass these even if §1–§4 are clean. These are Turing-test-for-slop questions.
 
@@ -579,6 +610,9 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 | **Consecutive sentences starting with the same word** | ≤ 2 | Three "The ..." sentences in a row = rewrite. |
 | **Paragraphs ≥ 6 sentences long in a row** | ≤ 2 | Break up the wall. |
 | **"Not just X" / "not only X"** | ≤ 1 per post, and only if the contrast is concrete | See §3f. |
+| **Antithesis / contrastive-reframe sentences** | ≤ 1 per 200 words | Contrast as the default rhythm is the §4q tell, even when each contrast is individually fine. |
+| **Consecutive paragraphs built on a central antithesis** | ≤ 1 | Two in a row makes the antithesis the structure, not a tool. See §4q. |
+| **Earned uplift turns per post** | ≤ 1, and only when evidence-backed | Structural optimism that would survive a worse result unchanged is unearned. See §4r. |
 | **Bullet-list items that are full sentences of 20+ words** | ≤ 3 per list | Longer means it should be prose. |
 | **Headings as questions** | ≤ 1 per post | LLMs overuse interrogative headings ("What is X?"). OK once; annoying thrice. |
 | **Closing exhortation paragraphs ("stay safe," "stay vigilant," "stay informed")** | 0 | Never. |
@@ -587,7 +621,7 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 
 ## 8. Example fix-ups
 
-### Fix-up 1 — Throat-clearing intro
+### Fix-up 1: Throat-clearing intro
 
 **Before:**
 > In today's ever-evolving cybersecurity landscape, the realm of medical device security presents unique and intricate challenges. As we navigate the complexities of an increasingly connected healthcare ecosystem, it is crucial to understand the pivotal role that the DICOM protocol plays. This article will delve into the nuances of securing DICOM in modern clinical environments.
@@ -599,7 +633,7 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 
 ---
 
-### Fix-up 2 — Vendor-neutral FUD
+### Fix-up 2: Vendor-neutral FUD
 
 **Before:**
 > Hackers can now leverage sophisticated techniques to exploit critical vulnerabilities in a leading medical imaging platform, potentially leading to devastating consequences for patient safety.
@@ -611,7 +645,7 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 
 ---
 
-### Fix-up 3 — Empty-adjective cluster
+### Fix-up 3: Empty-adjective cluster
 
 **Before:**
 > Our robust, state-of-the-art platform provides comprehensive, seamless, cutting-edge protection against the ever-evolving threat landscape, empowering organizations to proactively secure their critical assets.
@@ -623,7 +657,7 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 
 ---
 
-### Fix-up 4 — The restatement loop
+### Fix-up 4: The restatement loop
 
 **Before:**
 > Input validation is fundamentally one of the most important aspects of secure coding. By properly validating all inputs, developers can prevent a wide range of vulnerabilities including SQL injection and cross-site scripting. Therefore, input validation is critically important and should be a cornerstone of any secure development practice. It is essential to make input validation a core part of your coding process.
@@ -635,7 +669,7 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 
 ---
 
-### Fix-up 5 — Hedging seesaw
+### Fix-up 5: Hedging seesaw
 
 **Before:**
 > While zero trust offers many benefits, it's also important to consider its limitations. On the one hand, zero trust can significantly improve security posture. On the other hand, implementation can be challenging. However, with proper planning, organizations can successfully navigate these challenges.
@@ -709,3 +743,36 @@ Defensible, evidence-based, not arbitrary. These are tuned for the author's voic
 > CVE-2025-XXXXX is a pre-auth RCE in [Product] 4.2.0–4.4.3 via a crafted `/api/import` multipart boundary. The patch (4.4.4, March 12) adds a length check the parser should have had since 2019 — the same bug class caused CVE-2022-YYYYY in the same file. If you run this product, `grep` your access logs for `POST /api/import` with `Content-Type` containing `boundary=` and a `Content-Length` above ~64KB; that's every attempt, exploit or not.
 
 **What changed:** replaced advisory-speak with the actual vulnerability class, the affected versions, the specific endpoint, the historical-bug pattern ("this team has shipped this bug before"), and a grep command the reader can run tonight. This is the mode of tptacek, Tavis Ormandy, and Project Zero.
+
+---
+
+## 9. Mechanical verification
+
+Two kinds of check live in this file. Some are countable, and a script can run them. Others need a human read, and no script catches them. Run both. Passing the first kind is necessary, not sufficient.
+
+### Scriptable caps
+
+`scripts/check-draft.sh <draft.md>` counts the high-signal hard caps from §7: em-dash density, Tier-1 banned words, `not just / not only`, the `however / moreover / furthermore / additionally` pile-up, and closing exhortations. It exits non-zero when a cap is busted. Run it at the end of Pass 2, before the validation pass.
+
+The script's Tier-1 list is a high-signal subset, not the full §1 catalog, so a clean run does not retire the §1 word-level pass. The script also assumes a blog draft as input. Run it against a skill reference file and the Tier-1 and phrase checks will flag words the file legitimately quotes. Only the em-dash count is meaningful as a regression gate on the skill's own prose:
+
+```bash
+for f in SKILL.md references/*.md; do
+  printf '%s: ' "$f"
+  echo "$(grep -o '—' "$f" | wc -l) em dashes, $(wc -w < "$f") words"
+done
+```
+
+Every file in this skill is held to the same 3-per-1,000-words cap it imposes on drafts. An edit that pushes a file over is a regression: the skill's own prose is the example the model reads most closely, and an example that breaks the rule trains the model to break it.
+
+### Judgment checks (no script)
+
+These cannot be counted. A draft that passes the script can still fail every one:
+
+- **The antithesis rhythm (§4q).** Read each section. If most key sentences pivot on a contrast, the rhythm is the tell. Break the run.
+- **The negative-to-positive arc (§4r).** Would the ending change if the evidence were worse? If not, the uplift is structural. Cut it.
+- **False balance (§4e).** Does each counterpoint reflect a real disagreement, or is it fairness theater?
+- **The restatement loop (§4g) and summary paragraphs (§4h).** Is any point made twice?
+- **The smell tests (§5)** and the author-showed-up check from the note after §1e.
+
+The judgment checks are what separate fluent, anti-pattern-free prose from writing worth reading. Run them even when the script is green.
