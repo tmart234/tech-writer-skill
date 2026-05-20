@@ -1,7 +1,7 @@
 # Publishing platform: Jekyll / GitHub Pages
 
 > The publishing-platform layer. When the `voice/` folder is present, the core
-> skill's "Step 5: Front matter and formatting" defers to this file. It
+> skill's *Front matter and formatting* section defers to this file. It
 > describes the front matter and formatting conventions for one specific blog
 > (a medical-device-security-focused Jekyll/GitHub Pages site).
 

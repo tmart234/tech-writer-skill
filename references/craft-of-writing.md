@@ -10,8 +10,8 @@ McEnerney's central claim, which reframes everything else: **a piece of writing 
 
 For this skill, that means:
 
-- The persona ("principal security engineer talking to a smart colleague") and the diátaxis classification (Step 1) are not stylistic choices. They're decisions about **which community of readers** the post is being valuable to. Ambiguity here propagates: a post written to "appsec engineers and CISOs both" usually serves neither.
-- The Step 5 quality rubric scores how the draft will land *with that audience*. A draft that scores 50/50 against the wrong audience still fails its function.
+- The persona ("principal security engineer talking to a smart colleague") and the diátaxis content-type classification are not stylistic choices. They're decisions about **which community of readers** the post is being valuable to. Ambiguity here propagates: a post written to "appsec engineers and CISOs both" usually serves neither.
+- The quality rubric scores how the draft will land *with that audience*. A draft that scores 70/70 against the wrong audience still fails its function.
 - Most of the rest of the skill (anti-patterns, voice rules, structural caps) is calibrated to a specific reader: technical engineers reading a security/engineering blog. The rules look universal but they aren't; they're this audience's CODE. (See §3 below.)
 
 ---
@@ -32,7 +32,7 @@ McEnerney: most writing advice gives three goals: Clear, Organized, Persuasive. 
 
 Direct port to this skill's quality rubric. The five existing dimensions (Directness, Rhythm, Trust, Authenticity, Density) score the surface; the rubric assumes a valuable topic. McEnerney's frame is the prior question: **before scoring on those five, ask whether the post is valuable to its target reader at all.**
 
-The Step 1 vision test (problem the reader has + novel angle) is the operationalization of "valuable" for opinion posts. McEnerney's contribution is generalizing that test to every content type. Even a tutorial fails if the reader doesn't have the underlying need ("How to set up an mTLS proxy" is useless to a reader whose architecture doesn't justify mTLS at all). Even a deep dive fails if the reader doesn't already care about the system being explained.
+The vision test (problem the reader has + novel angle) is the operationalization of "valuable" for opinion posts. McEnerney's contribution is generalizing that test to every content type. Even a tutorial fails if the reader doesn't have the underlying need ("How to set up an mTLS proxy" is useless to a reader whose architecture doesn't justify mTLS at all). Even a deep dive fails if the reader doesn't already care about the system being explained.
 
 **Concrete check during Pass 0:** before evidence-gathering, write one sentence: *"This post is valuable to [specific reader] because [specific change in how they think or act]."* If you can't fill in either bracket, you don't have a post yet.
 

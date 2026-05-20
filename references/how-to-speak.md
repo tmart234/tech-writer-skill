@@ -68,7 +68,7 @@ Winston's rule for academic job talks: in five minutes, demonstrate (a) the prob
 - a **problem the reader already has** (or will have, demonstrably soon), and
 - a **novel angle**: a new diagnosis, new evidence, a new fix, or a new framing. Not just a restatement of the consensus take.
 
-If a draft fails (a), it's solving a problem nobody has. If it fails (b), it's a recap dressed as analysis. Both fail Step 5's Directness and Trust dimensions.
+If a draft fails (a), it's solving a problem nobody has. If it fails (b), it's a recap dressed as analysis. Both fail the quality rubric's Directness and Trust dimensions.
 
 ### 7. Practice with non-experts
 

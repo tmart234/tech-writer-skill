@@ -1,14 +1,14 @@
 # Anti-Patterns
 
-> Load this file when reviewing a draft. It is the reference for Step 3 (Scan for Anti-Patterns) in the `technical-blog-writer` skill. The voice is unflinching on purpose. If a rule reads as absolute, that is deliberate; exceptions are called out explicitly.
+> Load this file when reviewing a draft. It is the reference for the anti-pattern scan (Pass 2) in the `technical-blog-writer` skill. The voice is unflinching on purpose. If a rule reads as absolute, that is deliberate; exceptions are called out explicitly.
 
 ## How to use this file
 
-Run three passes against any draft:
+Run three sub-passes against any draft:
 
-1. **Word-level pass.** Grep for Tier 1 banned words. If any appear, replace per the table. Grep for Tier 2 words; count them. A cluster (roughly 3+ in the same post) is slop even if each is defensible alone.
-2. **Phrase and structure pass.** Look for banned phrases, banned structures, and hard-cap violations (em dashes, adverb density, etc.).
-3. **Smell-test pass.** Ask the holistic questions in §5. If a paragraph passes §1–§4 and still smells synthetic, it probably is.
+1. **Word-level sub-pass.** Grep for Tier 1 banned words. If any appear, replace per the table. Grep for Tier 2 words; count them. A cluster (roughly 3+ in the same post) is slop even if each is defensible alone.
+2. **Phrase and structure sub-pass.** Look for banned phrases, banned structures, and hard-cap violations (em dashes, adverb density, etc.).
+3. **Smell-test sub-pass.** Ask the holistic questions in §5. If a paragraph passes §1–§4 and still smells synthetic, it probably is.
 
 The enemy is not a word. The enemy is **generic, risk-free, evidence-free prose that could have been written by anyone about anything**. The vocabulary and structural tells in this file are the reliable proxies.
 
@@ -583,7 +583,7 @@ Recommending 60-day password rotation in 2026. Recommending AV signature vendors
 
 ### 6k. Beat-specific anti-patterns
 
-Failure modes tied to one domain rather than to security writing in general (a lazy take that recurs in a particular field, a throat-clear specific to one protocol or product) live in a voice profile when one is present. See `voice/beat-notes.md`. The generic core stops at §6j.
+Failure modes tied to one domain rather than to security writing in general (a lazy take that recurs in a particular field, a throat-clear specific to one protocol or product) live in a voice profile. If a voice profile is present, run its beat-specific anti-patterns (`voice/beat-notes.md`) alongside these as part of the third sub-pass; without one, the generic core stops at §6j.
 
 ---
 
