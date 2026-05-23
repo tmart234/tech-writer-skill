@@ -1,6 +1,6 @@
 # Anti-Patterns
 
-> Load this file when reviewing a draft. It is the reference for the anti-pattern scan (Pass 2) in the `technical-blog-writer` skill. The voice is unflinching on purpose. If a rule reads as absolute, that is deliberate; exceptions are called out explicitly.
+> Load this file when reviewing a draft. It is the reference for the anti-pattern scan (Pass 5) in the `technical-blog-writer` skill. The voice is unflinching on purpose. If a rule reads as absolute, that is deliberate; exceptions are called out explicitly.
 
 ## How to use this file
 
@@ -748,7 +748,9 @@ Two kinds of check live in this file. Some are countable, and a script can run t
 
 ### Scriptable caps
 
-`scripts/check-draft.sh <draft.md>` counts the high-signal hard caps from §7: em-dash density, Tier-1 banned words, `not just / not only`, the `however / moreover / furthermore / additionally` pile-up, and closing exhortations. It exits non-zero when a cap is busted. Run it at the end of Pass 2, before the validation pass.
+`scripts/check-draft.sh <draft.md>` counts the high-signal hard caps from §7: em-dash density, Tier-1 banned words, `not just / not only`, the `however / moreover / furthermore / additionally` pile-up, and closing exhortations. It exits non-zero when a cap is busted. Run it at the end of Pass 5, before the validation pass.
+
+**Storytelling anti-patterns live in `storytelling.md` §8**, not in this file. The two reference files are paired: this file catches sentence-level and structural-rhetorical failures (the academic intro form, the antithesis rhythm, the closing exhortation); `storytelling.md` §8 catches narrative-shape failures (buried lede, episodic "and then" sequences, no turn, missing takeaway, fake stakes). Run both during Pass 5. The §5 *"no concrete scene?"* smell-test in this file is the entry point to `storytelling.md` §4 (scene vs. summary) and §5 (opening hook taxonomy).
 
 The script's Tier-1 list is a high-signal subset, not the full §1 catalog, so a clean run does not retire the §1 word-level pass. The script also assumes a blog draft as input. Run it against a skill reference file and the Tier-1 and phrase checks will flag words the file legitimately quotes. Only the em-dash count is meaningful as a regression gate on the skill's own prose:
 

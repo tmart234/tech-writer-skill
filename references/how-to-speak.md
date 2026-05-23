@@ -6,7 +6,7 @@
 
 ## The frame: knowledge × practice
 
-Winston: *"Your success in life will be determined largely by your ability to speak, your ability to write, and the quality of your ideas. In that order."* He attributes the first two to **knowledge × practice**, with talent a small term. For this skill: the multi-pass architecture (Pass 0 evidence, Pass 1 draft, Pass 2 anti-pattern, Pass 3 validation) **is** the practice. Skipping passes is skipping the practice.
+Winston: *"Your success in life will be determined largely by your ability to speak, your ability to write, and the quality of your ideas. In that order."* He attributes the first two to **knowledge × practice**, with talent a small term. For this skill: the multi-pass architecture (Pass 1 evidence, Pass 4 draft, Pass 5 anti-pattern, Pass 6 validation) **is** the practice. Skipping passes is skipping the practice.
 
 ---
 
@@ -59,6 +59,8 @@ Winston argues storytelling is how humans learn to think. He gives five elements
 5. **Ways of evaluating how reliable a story is**: the epistemics: how to spot a vendor-press-release version vs. a reproducible-PoC version (cross-reference §6c of `anti-patterns.md` on theoretical-vs.-PoC-vs.-wild-vs.-KEV).
 
 This is the structure of a good **deep-dive** post. The five elements map onto: case studies → reading questions → analysis framework → cross-case synthesis → reliability check. If a deep dive only delivers (1) and stops, the reader can't apply the content. If it delivers (3) and (4) without (1) and (2), it's an abstract framework with no teeth.
+
+**Cross-reference for talk-shaped writing**: Winston's "story as the unit of teaching" is the *functional* form of story (cases as evidence, framework as instrument). For the *craft* form — narrative arc, scene construction, the five-beat skeleton, opening hook taxonomy — load `storytelling.md`. The Nancy Duarte Sparkline framework in `storytelling.md` §3.10 is the talk-shaped expansion of Winston's salient-idea / surprise / story trio: it gives you the contour (oscillation between "what is" and "what could be") that carries a 60-minute talk or a 3,000-word opinion piece.
 
 ### 6. Vision = problem they care about + something new
 

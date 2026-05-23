@@ -1,6 +1,6 @@
 # Core Writing Rules
 
-> Load this file before the Draft pass (Pass 1) and apply all of it. SKILL.md's *Core writing rules* section carries the index; this file carries the full set. Companion files: `anti-patterns.md` (what to scan a finished draft for), `how-to-speak.md` and `craft-of-writing.md` (the rhetorical theory behind several of these rules).
+> Load this file before the Draft pass (Pass 4) and apply all of it. SKILL.md's *Core writing rules* section carries the index; this file carries the full set. Companion files: `anti-patterns.md` (what to scan a finished draft for), `how-to-speak.md` and `craft-of-writing.md` (the rhetorical theory behind several of these rules).
 
 These are non-negotiable regardless of content type.
 

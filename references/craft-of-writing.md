@@ -24,7 +24,7 @@ McEnerney's diagnosis of why expert writing fails: writers use the writing proce
 
 The implication for this skill: **the post you wrote to figure out the topic is not the post your reader needs.** The first draft almost always reflects the writer's discovery path: what surprised the writer, in the order it surprised the writer. A reader who didn't share the discovery doesn't care about the order.
 
-This is the failure mode Pass 3 (validation) exists to catch. When checking sentence-level edits, also check structural ones: does the post open at the salient claim, or at the writer's chronology of investigation? A "first I tried X, then I tried Y, then I found Z" structure may be true to the investigation but is almost always wrong for the reader. Restructure to deliver Z first; demote X and Y to a "what didn't work and why" section if they're load-bearing.
+This is the failure mode Pass 6 (validation) exists to catch. When checking sentence-level edits, also check structural ones: does the post open at the salient claim, or at the writer's chronology of investigation? A "first I tried X, then I tried Y, then I found Z" structure may be true to the investigation but is almost always wrong for the reader. Restructure to deliver Z first; demote X and Y to a "what didn't work and why" section if they're load-bearing.
 
 ### 2. The four desiderata: Clear, Organized, Persuasive, Valuable
 
@@ -34,7 +34,7 @@ Direct port to this skill's quality rubric. The five existing dimensions (Direct
 
 The vision test (problem the reader has + novel angle) is the operationalization of "valuable" for opinion posts. McEnerney's contribution is generalizing that test to every content type. Even a tutorial fails if the reader doesn't have the underlying need ("How to set up an mTLS proxy" is useless to a reader whose architecture doesn't justify mTLS at all). Even a deep dive fails if the reader doesn't already care about the system being explained.
 
-**Concrete check during Pass 0:** before evidence-gathering, write one sentence: *"This post is valuable to [specific reader] because [specific change in how they think or act]."* If you can't fill in either bracket, you don't have a post yet.
+**Concrete check during Pass 1:** before evidence-gathering, write one sentence: *"This post is valuable to [specific reader] because [specific change in how they think or act]."* If you can't fill in either bracket, you don't have a post yet.
 
 ### 3. The CODE: community-specific value vocabulary
 
@@ -54,7 +54,7 @@ McEnerney's most concrete contribution: **the words that signal value are the wo
 - **Defect words:** anomaly, inconsistent, contradiction, incomplete, unresolved, missing, fails to, doesn't fit, breaks down
 - **Stake words:** at risk, exposed, vulnerable, costs, leaves open, allows, enables (an attacker)
 
-A post stuffed with these words isn't automatically valuable, but a post that contains *none* of them is almost certainly delivering background or recap, not constructing a problem the reader needs solved. During Pass 1 (drafting) and Pass 3 (validation), search the draft for these words; their absence in the intro is a strong signal that the intro is doing the academic stability move (background → thesis) instead of constructing instability → solution.
+A post stuffed with these words isn't automatically valuable, but a post that contains *none* of them is almost certainly delivering background or recap, not constructing a problem the reader needs solved. During Pass 4 (drafting) and Pass 6 (validation), search the draft for these words; their absence in the intro is a strong signal that the intro is doing the academic stability move (background → thesis) instead of constructing instability → solution.
 
 **Pattern for technical blog intros (adapted from McEnerney's Problem grammar):**
 
@@ -123,7 +123,7 @@ McEnerney's bluntest line: *"Explaining is revealing what's inside your head. No
 
 This is sharper than the skill's existing "statements that teach or argue" rubric and sharper than the anti-pattern §4d ("the announcement"). The reframe: every paragraph should be doing something *to the reader*: installing a new model, dislodging an old one, supplying a primitive they need to make the next decision. Paragraphs that exist to "share what I learned" or "walk through how this works" without targeting a reader-side change are explaining, not arguing.
 
-**Test during Pass 3:** for each paragraph, ask *what does the reader believe or do differently after reading this that they didn't before?* If the answer is "they now know the thing I knew," the paragraph is explaining. Either tighten it to the reader-side change or cut it.
+**Test during Pass 6:** for each paragraph, ask *what does the reader believe or do differently after reading this that they didn't before?* If the answer is "they now know the thing I knew," the paragraph is explaining. Either tighten it to the reader-side change or cut it.
 
 This applies most strongly to deep dives, the content type most prone to "let me show you all the cool stuff I figured out." Deep dives can absolutely be valuable, but only when the cool stuff is in service of changing how the reader thinks about a system, not when it's narration of the writer's discovery process.
 
@@ -188,20 +188,31 @@ McEnerney spends little time on prose mechanics: sentence rhythm, word choice, p
 
 | McEnerney principle | Writing analog | Apply? |
 |---|---|---|
-| Value lives in readers, not work | Pass 0 valuable-to-whom sentence | **Yes (new)** |
-| Writing process ≠ reading process | Pass 3 structural restructuring check | **Yes (new)** |
+| Value lives in readers, not work | Pass 1 valuable-to-whom sentence | **Yes (new)** |
+| Writing process ≠ reading process | Pass 6 structural restructuring check | **Yes (new)** |
 | Clear/Organized/Persuasive/Valuable | Quality-rubric prior question | **Yes (new)** |
 | The CODE | Audience-specific vocabulary, security-blog code list | **Yes (new)** |
 | Instability vocabulary | Positive word list for intros (but, however, anomaly, inconsistent) | **Yes (new)** |
 | Stasis vs. background | Editing test for intro background blocks | **Yes (new)** |
 | Problem in readers vs. world | Vuln writeup TL;DR earns its place; required for security posts | **Yes (new)** |
 | Gap vs. error problem | Choose pressure profile; default to error for opinion posts | **Yes (new)** |
-| Don't explain: change their ideas | Pass 3 paragraph-level test | **Yes (new)** |
+| Don't explain: change their ideas | Pass 6 paragraph-level test | **Yes (new)** |
 | Feedback: "where do you stop seeing why this matters" | Reviewer prompt | **Yes (new)** |
 | Lit review enriches problem | Prior-art section discipline | **Yes (new)** |
 | Reader's costs, not writer's | Motivation framing | **Yes (new)** |
 | Forget the rules | (rules in this skill ARE the audience's CODE) | **Reframe** |
 | Always state a problem | (with judgment; tutorials are an exception) | Cap |
+
+---
+
+## Pairing with the storytelling reference
+
+This file is the *argument* layer — how to construct a problem the reader needs solved, name the stakes, and let the value live in the reader. The *delivery* layer — how to shape the prose so the reader is carried through the argument rather than asked to walk it — lives in `storytelling.md`. The two are complementary:
+
+- `craft-of-writing.md` (this file): instability vocabulary, gap-vs-error problems, stasis-vs-background, explain-vs-change. The McEnerney / UChicago argument-construction tradition.
+- `storytelling.md`: narrative arc, the five-beat skeleton (hook / stakes / tension / turn / takeaway), framework catalog, show-don't-tell, opening hook taxonomy. The narrative-craft tradition.
+
+Apply both. A post with strong argument construction and no story shape reads pointed but inert. A post with strong story shape and weak argument reads vivid but vapid. Pass 1 + Pass 2 produce the argument; Pass 3 produces the shape.
 | Academic dissertation apparatus | Adapt, don't port | Adapt |
 | Symbol / slogan | (already covered in how-to-speak.md §4) | Already covered |
 | Knowledge-as-consensus philosophy | Operational consequence only (write for a community) | Partial |

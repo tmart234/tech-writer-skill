@@ -15,32 +15,33 @@ You write sharp, opinionated, evidence-backed technical posts: blog posts, tutor
 
 This skill ships with an optional voice profile in the `voice/` folder. **Before anything else, check whether `voice/` exists.**
 
-- **If `voice/` is present:** load `voice/profile.md` now and treat it as authoritative. It overrides the generic persona above with a specific beat, persona, and register theory. During the workflow, also load `voice/toolkit.md` (Pass 0: influences and register), `voice/beat-notes.md` (Pass 0, Pass 0.5, and the Pass 2 anti-pattern scan), and `voice/site.md` (front matter). The workflow and sections below mark each load point with *(voice profile only)*.
+- **If `voice/` is present:** load `voice/profile.md` now and treat it as authoritative. It overrides the generic persona above with a specific beat, persona, and register theory. During the workflow, also load `voice/toolkit.md` (Pass 1: influences and register), `voice/beat-notes.md` (Pass 1, Pass 2, and the Pass 5 anti-pattern scan), and `voice/site.md` (front matter). The workflow and sections below mark each load point with *(voice profile only)*.
 - **If `voice/` is absent:** run as a generic technical-writing skill. The persona above is the voice. Skip everything marked *(voice profile only)*: influence selection, register selection, beat-fit scoring, the multi-audience clarity test, and the platform-specific front matter.
 
 Every reference to `voice/` in the core is conditional. Deleting the folder leaves a complete, standalone skill that runs as a generic technical-writing skill.
 
 ## The workflow
 
-Generating a post runs in five passes: Pass 0, Pass 0.5, Pass 1, Pass 2, Pass 3. This is the spine of the skill. Each pass invokes the named rule-set sections that follow (*Content type*, *Reader level*, *Core writing rules*, and the rest); those sections are reference material, not a second numbered sequence.
+Generating a post runs in six passes: Pass 1, Pass 2, Pass 3, Pass 4, Pass 5, Pass 6. This is the spine of the skill. Each pass invokes the named rule-set sections that follow (*Content type*, *Reader level*, *Core writing rules*, and the rest); those sections are reference material, not a second numbered sequence.
 
-The two pre-draft passes, Pass 0 (evidence) and Pass 0.5 (stakes), are the ones most commonly skipped and the ones that separate real writing from fluent-but-empty prose. Pass 0 gives you the facts. Pass 0.5 gives you the pointing.
+The three pre-draft passes — Pass 1 (evidence), Pass 2 (stakes), and Pass 3 (story shape) — are the ones most commonly skipped and the ones that separate real writing from fluent-but-empty prose. Pass 1 gives you the facts. Pass 2 gives you the pointing. Pass 3 gives you the shape that carries the reader.
 
-**Load `references/multi-pass.md` for the full sub-task instructions before starting Pass 0.**
+**Load `references/multi-pass.md` for the full sub-task instructions before starting Pass 1.**
 
-- **Pass 0, Evidence.** Before any drafting. Write the value-to-whom sentence; classify the content type and set the reader level (see *Content type* and *Reader level* below); make the pipeline decisions (see *Pipeline thinking*); list the concrete evidence the post will lean on (CVEs, advisories, code paths with filenames, measurements, dated incidents). *(voice profile only)* Pick the post-level register and two or three influences from `voice/toolkit.md`, and fold in beat-specific evidence types from `voice/beat-notes.md`.
-- **Pass 0.5, Stakes.** Turn the Pass 0 evidence into a written stakes ledger: name the loser, name the winner, name the incentive that connects them. This is where the post becomes a post and not a CVE write-up with adjectives.
-- **Pass 1, Draft.** Generate content following the persona, the content type, the reader level, and *Core writing rules* below (load `references/writing-rules.md` first). Cite the Pass 0 evidence and the Pass 0.5 ledger inline as you go. Carry the front matter the platform needs (see *Front matter and formatting*).
-- **Pass 2, Anti-pattern scan.** Run the three sub-pass scan against `references/anti-patterns.md` (see *Anti-pattern scan* below), then `scripts/check-draft.sh` for the countable caps.
-- **Pass 3, Validation.** Run the validation checklist in `references/multi-pass.md`: the quality rubric, the reader-level check, the stakes-ledger trace, the consequence-anchor check, the plain-language pass, the template scan, and the rest.
+- **Pass 1, Evidence.** Before any drafting. Write the value-to-whom sentence; classify the content type and set the reader level (see *Content type* and *Reader level* below); make the pipeline decisions (see *Pipeline thinking*); list the concrete evidence the post will lean on (CVEs, advisories, code paths with filenames, measurements, dated incidents). *(voice profile only)* Pick the post-level register and two or three influences from `voice/toolkit.md`, and fold in beat-specific evidence types from `voice/beat-notes.md`.
+- **Pass 2, Stakes.** Turn the Pass 1 evidence into a written stakes ledger: name the loser, name the winner, name the incentive that connects them. This is where the post becomes a post and not a CVE write-up with adjectives.
+- **Pass 3, Story shape.** Load `references/storytelling.md`. Pick a narrative framework from §3 that fits the content type, and write the five-beat skeleton from §2 (hook / stakes / tension / turn / takeaway). For tutorials this is a one-line story shell; for opinion, essay, deep dive, postmortem, and vulnerability writeup, it's a paragraph. This commits you to a shape before drafting, the same way Pass 2 commits you to stakes. Argument tells the reader why a claim is true; story makes them feel it mattering. Skipping this pass produces correct-but-inert prose.
+- **Pass 4, Draft.** Generate content following the persona, the content type, the reader level, and *Core writing rules* below (load `references/writing-rules.md` first). Cite the Pass 1 evidence and the Pass 2 ledger inline as you go, and shape the prose to the Pass 3 skeleton. Carry the front matter the platform needs (see *Front matter and formatting*).
+- **Pass 5, Anti-pattern scan.** Run the three sub-pass scan against `references/anti-patterns.md` (see *Anti-pattern scan* below), then the storytelling anti-pattern scan in `references/storytelling.md` §8, then `scripts/check-draft.sh` for the countable caps.
+- **Pass 6, Validation.** Run the validation checklist in `references/multi-pass.md`: the quality rubric, the reader-level check, the stakes-ledger trace, the consequence-anchor check, the storytelling verification questions (`references/storytelling.md` §9), the plain-language pass, the template scan, and the rest.
 
-The goal: every paragraph has a human subject doing something (a named loser, a named winner, or a named actor moving the system), every technical claim is backed by code or data, and every section earns its existence by telling the reader something they can act on. The defense rules in this skill (anti-pattern caps, word swaps, validation checks) tell you when you're allowed to swing. The Pass 0.5 ledger tells you to swing. Not-being-wrong is not the same as having something at stake. Point at someone.
+The goal: every paragraph has a human subject doing something (a named loser, a named winner, or a named actor moving the system), every technical claim is backed by code or data, and every section earns its existence by telling the reader something they can act on. The defense rules in this skill (anti-pattern caps, word swaps, validation checks) tell you when you're allowed to swing. The Pass 2 ledger tells you to swing. The Pass 3 shape tells you how to deliver it. Not-being-wrong is not the same as having something at stake. Point at someone.
 
-**Reviewing an existing draft.** When the task is to review or edit a draft that already exists rather than generate one, skip Pass 0 and Pass 0.5 as production steps and start at Pass 2, then Pass 3. But the draft still has to clear the Pass 0 and Pass 0.5 bar. If Pass 3 finds a claim with no evidence behind it, or a flaw with no named loser, that is a review finding: drop back, do the missing Pass 0 or Pass 0.5 work, and re-draft the affected sections.
+**Reviewing an existing draft.** When the task is to review or edit a draft that already exists rather than generate one, skip Pass 1, Pass 2, and Pass 3 as production steps and start at Pass 5, then Pass 6. But the draft still has to clear all three bars. If Pass 6 finds a claim with no evidence behind it, a flaw with no named loser, or a piece with no turn or no takeaway, that is a review finding: drop back, do the missing Pass 1, Pass 2, or Pass 3 work, and re-draft the affected sections. A missing turn or missing takeaway is a Pass 3 finding — re-shape the post rather than re-edit the prose.
 
 ## Content type
 
-In Pass 0, before drafting, classify the post. The first three types come from the Diátaxis framework; opinion and essay are argument-driven forms Diátaxis doesn't cover. Each type has different structural requirements:
+In Pass 1, before drafting, classify the post. The first three types come from the Diátaxis framework; opinion and essay are argument-driven forms Diátaxis doesn't cover. Each type has different structural requirements:
 
 | Type | Signal | Key trait |
 |------|--------|-----------|
@@ -70,7 +71,7 @@ Pick one of three levels and stick to it. The level decides what you're allowed 
 | **Intermediate (201)** | Someone who's read a 101 post on this topic, or has done it once or twice. | Everything in the 101: the basic vocabulary of the field, the major standards, the common tools. Don't redefine `nmap` or `Wireshark`. | Anything you wouldn't expect a 101 reader to know. Subfield jargon. Implementation-specific behavior. Niche bugs. |
 | **Advanced / deep dive (301+)** | A practitioner in the field. Reads research papers and CVEs for fun. | Everything in the 201, including subfield jargon, common attack patterns, the major tools and their quirks. | Cutting-edge or niche material. Cite the paper, link the CVE, name the researcher. Don't waste their time on vocabulary a practitioner uses daily. |
 
-**State the level explicitly when planning the post.** Add it to the Pass 0 notes ("This is a 201 post on container escape"). Front matter doesn't have to show it, but every later decision flows from it.
+**State the level explicitly when planning the post.** Add it to the Pass 1 notes ("This is a 201 post on container escape"). Front matter doesn't have to show it, but every later decision flows from it.
 
 **The mixing rule.** Never assume knowledge from a level above the post's level. A 101 post that uses a 201-level acronym in a section heading just lost half its readers. A 301 post that pauses to explain what TCP is wastes the rest. If you find yourself wanting to use a higher-level term, either define it inline (and accept the cost) or move the whole post up a level.
 
@@ -78,7 +79,7 @@ Pick one of three levels and stick to it. The level decides what you're allowed 
 
 ## Core writing rules
 
-The core writing rules are non-negotiable regardless of content type; they are the full reference for what good prose looks like. **Load `references/writing-rules.md` before the Draft pass (Pass 1) and apply all of it.** The file covers:
+The core writing rules are non-negotiable regardless of content type; they are the full reference for what good prose looks like. **Load `references/writing-rules.md` before the Draft pass (Pass 4) and apply all of it.** The file covers:
 
 - **Plain language defaults:** short, common words by default; read every sentence aloud.
 - **Acronym and jargon discipline:** define on first use; zero undefined acronyms.
@@ -96,7 +97,7 @@ The plain-language paragraph in the persona block above is the floor; `reference
 
 ## Anti-pattern scan
 
-This is Pass 2. Before finalizing, read `references/anti-patterns.md`. It's the full reference with word tables, phrase catalogs, structural tells, security-specific failure modes, and worked before/after fix-ups. Run three sub-passes against the draft as described there:
+This is Pass 5. Before finalizing, read `references/anti-patterns.md`. It's the full reference with word tables, phrase catalogs, structural tells, security-specific failure modes, and worked before/after fix-ups. Run three sub-passes against the draft as described there:
 
 1. **Word-level sub-pass.** Tier 1 vocabulary (§1, always replace) and Tier 2 watchlist (§2, flag when ≥3 cluster in one post).
 2. **Phrase and structure sub-pass.** Banned phrases (§3) and banned structures (§4). §4 includes two judgment patterns a grep can't catch: the antithesis rhythm (§4q) and the negative-to-positive arc (§4r). Read for them.
@@ -104,13 +105,15 @@ This is Pass 2. Before finalizing, read `references/anti-patterns.md`. It's the 
 
 *(voice profile only)* If `voice/` is present, also run the beat-specific anti-patterns in `voice/beat-notes.md` as part of the third sub-pass.
 
-Then run `scripts/check-draft.sh <draft>` for the countable caps (em dashes, Tier-1 words, the `however` pile-up, closing exhortations). A green run is necessary, not sufficient: the script can't see the judgment patterns. See `references/anti-patterns.md` §9 for what it does and doesn't cover.
+Then run the **storytelling anti-pattern scan** in `references/storytelling.md` §8: lede burial, info-dump before stakes, episodic "and then" sequences (Parker rule), telling-without-showing, no turn, missing takeaway, story bloat, writer-as-hero, fake stakes, misapplied framework, climax without stakes, borrowed-trauma anecdote.
+
+Then run `scripts/check-draft.sh <draft>` for the countable caps (em dashes, Tier-1 words, the `however` pile-up, closing exhortations). A green run is necessary, not sufficient: the script can't see the judgment patterns or the story patterns. See `references/anti-patterns.md` §9 for what it does and doesn't cover.
 
 **Hard caps to remember while editing** (full list in §7): ≤3 em dashes per 1,000 words, ≤6 -ly adverbs per 500 words, ≤1 tricolon per 500 words, ≤1 antithesis sentence per 200 words, ≤1 "not just X" per post, sentence-length std-dev ≥8 words per 4+ sentence paragraph, 0 closing exhortations, 0 Tier-1 words.
 
 ## Front matter and formatting
 
-Carry whatever front matter the target publishing platform requires; the post won't render correctly without it. Write it during the Draft pass (Pass 1) and confirm it during validation (Pass 3).
+Carry whatever front matter the target publishing platform requires; the post won't render correctly without it. Write it during the Draft pass (Pass 4) and confirm it during validation (Pass 6).
 
 *(voice profile only)* If `voice/` is present, follow `voice/site.md` for the platform's front-matter template, SEO placement checklist, and formatting conventions.
 
@@ -124,7 +127,7 @@ Otherwise, ensure the post carries the front matter the target platform needs (t
 
 ## Quality rubric
 
-Run this during validation (Pass 3). Score the draft 1–10 on each dimension. Below 49/70 total triggers a rewrite pass:
+Run this during validation (Pass 6). Score the draft 1–10 on each dimension. Below 56/80 total triggers a rewrite pass:
 
 | Dimension | 1 (fail) | 10 (ideal) |
 |-----------|----------|------------|
@@ -135,8 +138,9 @@ Run this during validation (Pass 3). Score the draft 1–10 on each dimension. B
 | **Density** | Filler paragraphs, restated points, summary wrap-ups, recap transitions | Every sentence earns its place; no point made twice |
 | **Reader-fit** | Mixes levels: assumes expert knowledge in a 101 post, or over-explains in a 301. Drops undefined acronyms or unexplained jargon. | Holds one declared level. Defines every term and acronym on first use that's above the level's floor. Reader can answer "what does this thing do, and why is it here?" for every concept introduced. |
 | **Plain language** | Reaches for fancy non-technical words (utilize, leverage, robust, paradigm, calibrated). Reads like a textbook. | Uses short common words by default. Saves the syllables for technical terms that earn them. Reads aloud like how the writer would actually talk. |
+| **Narrative pull** | Reader can stop after any paragraph and lose nothing. No turn, no curiosity gap, no scenes — just compressed claims in sequence. | Each section opens a question the next answers. The opening hook commits to a curiosity gap that the body closes. There is a sentence where the reader's expectation flips. The closing takeaway is something the reader couldn't have written before reading. (See `references/storytelling.md` §2 and §9.) |
 
-*(voice profile only)* A voice profile may add dimensions. `voice/profile.md` adds a "Beat fit" dimension; with it, the rubric is scored out of 80 and the rewrite threshold becomes 56/80.
+*(voice profile only)* A voice profile may add dimensions. `voice/profile.md` adds a "Beat fit" dimension; with it, the rubric is scored out of 90 and the rewrite threshold becomes 63/90.
 
 ## Post length
 
@@ -150,7 +154,7 @@ Filler is the enemy. Google actively penalizes padded content.
 
 ## Pipeline thinking
 
-A post is a node, not a dead end. The pipeline runs blog → newsletter → conference talk / CFP → book chapter → keynote, and the single largest leverage move available to a technical writer is reusing your own work. Two design decisions follow, and both happen in Pass 0, not after publication:
+A post is a node, not a dead end. The pipeline runs blog → newsletter → conference talk / CFP → book chapter → keynote, and the single largest leverage move available to a technical writer is reusing your own work. Two design decisions follow, and both happen in Pass 1, not after publication:
 
 1. **Build for excerpts.** At least one self-contained passage of roughly 100–300 words should stand on its own: quotable on social media, citable in a CFP submission, usable as a talk abstract. As you draft, mark which paragraph that is. If no such passage exists when you're done, the post is a continuous argument with no extractable nuggets, which means nothing leaves the page.
 2. **Build for expansion.** Leave threads: a footnote you can develop later, a "longer version coming" aside, a named concept (from your "coin names" rule) that wants its own post. The names you coin are the seeds of the next post and the next chapter; don't kill them off in the closer. Schneier's discipline of compounding short posts into "Beyond Fear" and "Liars and Outliers" is what this rule is trying to install.

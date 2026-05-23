@@ -6,7 +6,7 @@ A skill for writing, editing, and reviewing long-form technical posts: blog post
 
 The skill is built in two layers so the generic craft can be shared without the personal voice.
 
-**Core (generic, stands alone).** `SKILL.md`, `references/`, and `scripts/`. A complete technical-writing skill on its own: content-type classification, reader-level discipline, the five-pass workflow, the AI-slop anti-pattern catalog, the rhetorical theory (Winston, McEnerney), and the mechanical draft checker. Topic-agnostic. Nothing here imports a path from `voice/`.
+**Core (generic, stands alone).** `SKILL.md`, `references/`, and `scripts/`. A complete technical-writing skill on its own: content-type classification, reader-level discipline, the six-pass workflow (evidence → stakes → story shape → draft → anti-pattern → validation), the AI-slop anti-pattern catalog, the rhetorical theory (Winston, McEnerney), the narrative-craft reference (frameworks from Freytag through StoryBrand, the five-beat skeleton, opening hook taxonomy), and the mechanical draft checker. Topic-agnostic. Nothing here imports a path from `voice/`.
 
 **Voice (the secret sauce, optional).** The `voice/` folder. The persona, the beat, the influences, the register theory, the publishing platform. This is what makes the output sound like one specific author on one specific beat.
 
@@ -21,12 +21,13 @@ See `voice/README.md` for how the core consumes that folder.
 ## Layout
 
 ```
-SKILL.md                  core: the five-pass workflow, rule-set sections, the voice hook
+SKILL.md                  core: the six-pass workflow, rule-set sections, the voice hook
 references/
   writing-rules.md        core: the non-negotiable prose rules
   anti-patterns.md        core: the AI-slop catalog
-  multi-pass.md           core: the five-pass workflow detail
-  methods-of-development.md  core: body-structure catalog (loaded at Pass 0 for 1,200+ word posts)
+  multi-pass.md           core: the six-pass workflow detail
+  methods-of-development.md  core: body-structure catalog (loaded at Pass 1 for 1,200+ word posts)
+  storytelling.md         core: narrative-craft reference (loaded at Pass 3 — frameworks, five-beat skeleton, hook taxonomy, cognitive science, anti-patterns)
   how-to-speak.md         core: rhetorical theory (Winston)
   craft-of-writing.md     core: rhetorical theory (McEnerney)
   technical-documentation.md  sibling reference: documentation/procedure/report mode (out of scope for the blog workflow)
