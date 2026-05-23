@@ -28,6 +28,7 @@ references/
   multi-pass.md           core: the five-pass workflow detail
   how-to-speak.md         core: rhetorical theory (Winston)
   craft-of-writing.md     core: rhetorical theory (McEnerney)
+  technical-documentation.md  sibling reference: documentation/procedure/report mode (out of scope for the blog workflow)
 scripts/
   check-draft.sh          core: mechanical anti-pattern checker
 voice/                    optional: the secret-sauce layer
