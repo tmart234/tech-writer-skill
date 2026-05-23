@@ -26,8 +26,10 @@ references/
   writing-rules.md        core: the non-negotiable prose rules
   anti-patterns.md        core: the AI-slop catalog
   multi-pass.md           core: the five-pass workflow detail
+  methods-of-development.md  core: body-structure catalog (loaded at Pass 0 for 1,200+ word posts)
   how-to-speak.md         core: rhetorical theory (Winston)
   craft-of-writing.md     core: rhetorical theory (McEnerney)
+  technical-documentation.md  sibling reference: documentation/procedure/report mode (out of scope for the blog workflow)
 scripts/
   check-draft.sh          core: mechanical anti-pattern checker
 voice/                    optional: the secret-sauce layer
