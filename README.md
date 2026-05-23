@@ -18,6 +18,26 @@ The skill is built in two layers so the generic craft can be shared without the 
 
 See `voice/README.md` for how the core consumes that folder.
 
+## Install in Claude Code
+
+Build the archive:
+
+```bash
+./scripts/build-skill.sh             # includes voice/
+./scripts/build-skill.sh --no-voice  # generic core only
+```
+
+Then either drag `dist/technical-blog-writer.skill` into a Claude Code
+session, or unzip it manually:
+
+```bash
+mkdir -p ~/.claude/skills
+unzip dist/technical-blog-writer.skill -d ~/.claude/skills/
+```
+
+Claude Code auto-discovers skills under `~/.claude/skills/` and triggers
+this one on long-form technical-writing requests.
+
 ## Layout
 
 ```
