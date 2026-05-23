@@ -61,7 +61,7 @@ If you can't pick a row, the body doesn't yet have a shape; you're probably stil
 
 **Failure mode — chronology without consequence.** A timeline that lists what happened but never reaches the cause-and-effect chain. *"On day 0, the alert fired. On day 2, the team triaged. On day 5, the patch shipped."* What did the reader learn? Pair chronological with cause-and-effect (§6) for the post-mortem section, or with order-of-importance (§8) when you want the reader to remember the worst hour of the timeline rather than the chronologically last one.
 
-**Failure mode — buried lede.** Strict chronology forces you to write the boring background first. If the reader needs to know the outcome to care about the timeline, open with the outcome and then enter chronological mode. The Pass 3 *Structural restructuring check* (multi-pass.md item 18) catches this.
+**Failure mode — buried lede.** Strict chronology forces you to write the boring background first. If the reader needs to know the outcome to care about the timeline, open with the outcome and then enter chronological mode. The Pass 3 *Structural restructuring check* (multi-pass.md item 19) catches this.
 
 **Verb tense discipline:** past tense throughout for completed events. Switching to present tense ("the operator radios in, the dispatcher pulls the runbook") creates a vivid narrative voice that's fine for a single set-piece paragraph but exhausting across a whole timeline. Pick one and stick with it.
 
@@ -218,4 +218,4 @@ Common combinations from this skill's beat:
 ## When to skip this file
 
 - **Short posts (under ~1,200 words).** A short post carries linearly on its salient idea; imposing a structural pattern is ceremony.
-- **Posts reviewed mid-flight.** When `multi-pass.md`'s "reviewing an existing draft" mode applies, the body shape is already a fact; the question becomes whether the existing shape matches the content type and whether the discovery-path failure is present. If it is, the fix is a restructure (Pass 3 item 18), not a re-pick from this file.
+- **Posts reviewed mid-flight.** When `multi-pass.md`'s "reviewing an existing draft" mode applies, the body shape is already a fact; the question becomes whether the existing shape matches the content type and whether the discovery-path failure is present. If it is, the fix is a restructure (Pass 3 item 19), not a re-pick from this file.
