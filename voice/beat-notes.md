@@ -5,9 +5,9 @@
 > below. Nothing here applies to the generic core; it all assumes the persona
 > in `profile.md`.
 
-## Beat-specific evidence types (Pass 0)
+## Beat-specific evidence types (Pass 1)
 
-The generic Pass 0 evidence list (`references/multi-pass.md`) covers CVEs, code paths, measurements, advisories, research papers. The medical-device beat adds primary sources the generic list doesn't name:
+The generic Pass 1 evidence list (`references/multi-pass.md`) covers CVEs, code paths, measurements, advisories, research papers. The medical-device beat adds primary sources the generic list doesn't name:
 
 - **MAUDE reports.** The FDA's adverse-event database. Cite by report number.
 - **IEC 62304 clauses.** The software lifecycle standard for medical-device software.
@@ -16,17 +16,17 @@ The generic Pass 0 evidence list (`references/multi-pass.md`) covers CVEs, code 
 - **MDS2 forms.** The manufacturer disclosure statement for medical device security.
 - **IT vs. OT framing, biomed, V&V, premarket vs. postmarket.**
 
-Fold these into the Pass 0 evidence list and the Pass 0.5 stakes ledger the same way you'd fold in a CVE.
+Fold these into the Pass 1 evidence list and the Pass 2 stakes ledger the same way you'd fold in a CVE.
 
-## Beat-specific stakes (Pass 0.5)
+## Beat-specific stakes (Pass 2)
 
-The generic Pass 0.5 instructions (`references/multi-pass.md`) say to name a loser, a winner, and the incentive connecting them. On this beat, the named loser is almost always a person in a clinical setting and the cause-to-consequence chain is the move Rios is named for in `voice/toolkit.md`. Worked examples of the three sub-tasks:
+The generic Pass 2 instructions (`references/multi-pass.md`) say to name a loser, a winner, and the incentive connecting them. On this beat, the named loser is almost always a person in a clinical setting and the cause-to-consequence chain is the move Rios is named for in `voice/toolkit.md`. Worked examples of the three sub-tasks:
 
 - **Loser.** Not "patient safety is impacted" but "the patient on the table during the procedure when the imaging workstation reboots." Not "hospitals are exposed" but "the on-call biomed at 2 a.m. who has to decide whether to keep the PACS running until morning." Not "the outage was severe" but "the 7,000 patients stranded by the Change Healthcare outage."
 - **Winner.** Not "vendors don't fix this" but "the firmware engineer who copy-pasted the Makefile in 2014 and the VP who decided rev-locking the SDK was cheaper than re-validating." Not "the regulator was slow" but "the FDA reviewer with 200 premarket submissions in the queue and no authority to require post-market patches."
 - **Incentive.** "The 510(k) substantial-equivalence pathway lets a 2024 device inherit the 2009 device's security posture by reference." "DICOM has no transport encryption requirement, and procurement specs don't ask for one because the AE Title is a vendor-side concern."
 
-## Beat-specific anti-patterns (Pass 2)
+## Beat-specific anti-patterns (Pass 5)
 
 Run these alongside the generic security anti-patterns in `references/anti-patterns.md` §6.
 

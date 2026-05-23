@@ -1,6 +1,6 @@
 # Methods of Development
 
-> Load this file at Pass 0 when the post is longer than ~1,200 words. SKILL.md picks the *content type* (tutorial / how-to / deep dive / opinion / essay); `multi-pass.md` Pass 0 hooks to this file to pick the *method of development* — how the body organizes its evidence inside that content type. The two are orthogonal. Name a primary method (and any secondaries) in the Pass 0 notes; the body inherits the structure.
+> Load this file at Pass 1 when the post is longer than ~1,200 words. SKILL.md picks the *content type* (tutorial / how-to / deep dive / opinion / essay); `multi-pass.md` Pass 1 hooks to this file to pick the *method of development* — how the body organizes its evidence inside that content type. The two are orthogonal. Name a primary method (and any secondaries) in the Pass 1 notes; the body inherits the structure.
 >
 > Companion files: `multi-pass.md` (where this file gets loaded), `craft-of-writing.md` (§1 names the discovery-path failure this file exists to fix), `writing-rules.md` (procedural-section discipline is what §1 below looks like at sentence level).
 
@@ -59,9 +59,9 @@ If you can't pick a row, the body doesn't yet have a shape; you're probably stil
 
 **Fit on this beat:** incident timelines, vulnerability disclosure timelines, post-mortems, "how this bug class evolved" historical posts, regulatory-action retrospectives (FDA letters, CISA advisories), accident-investigation pieces.
 
-**Failure mode — chronology without consequence.** A timeline that lists what happened but never reaches the cause-and-effect chain. *"On day 0, the alert fired. On day 2, the team triaged. On day 5, the patch shipped."* What did the reader learn? Pair chronological with cause-and-effect (§6) for the post-mortem section, or with order-of-importance (§8) when you want the reader to remember the worst hour of the timeline rather than the chronologically last one.
+**Failure mode — chronology without consequence.** A timeline that lists what happened but never reaches the cause-and-effect chain. *"On day 0, the alert fired. On day 2, the team triaged. On day 5, the patch shipped."* What did the reader learn? Pair chronological with cause-and-effect (§6) for the post-mortem section, or with order-of-importance (§8) when you want the reader to remember the worst hour of the timeline rather than the chronologically last one. Chronological is the *structural ordering*; what makes a chronological piece *land* is scene, turn, and stakes — see `storytelling.md` §7.1 (postmortem-as-story mini-template) and §4.1 (And/But/Therefore rule: transitions between timeline beats should read as "but" or "therefore," not "and then").
 
-**Failure mode — buried lede.** Strict chronology forces you to write the boring background first. If the reader needs to know the outcome to care about the timeline, open with the outcome and then enter chronological mode. The Pass 3 *Structural restructuring check* (multi-pass.md item 19) catches this.
+**Failure mode — buried lede.** Strict chronology forces you to write the boring background first. If the reader needs to know the outcome to care about the timeline, open with the outcome and then enter chronological mode. The Pass 6 *Structural restructuring check* (multi-pass.md item 19) catches this.
 
 **Verb tense discipline:** past tense throughout for completed events. Switching to present tense ("the operator radios in, the dispatcher pulls the runbook") creates a vivid narrative voice that's fine for a single set-piece paragraph but exhausting across a whole timeline. Pick one and stick with it.
 
@@ -123,7 +123,7 @@ Tables are the densest part-by-part form and are usually the right move for comp
 
 **Failure mode — criteria-shopping.** Picking criteria that flatter the conclusion you already wanted. If the criteria came from somewhere — a regulatory checklist, a NIST publication, a procurement RFP — name the source. If you invented them, justify each one in a sentence before the comparison begins. Comparison without justified criteria reads as advocacy.
 
-**Failure mode — comparison without dispositions.** A side-by-side that doesn't help the reader pick. The Pass 0.5 *named winner / named loser* discipline applies here too: who is better off picking A over B, and under what condition? A comparison section that ends with *"both have their place"* and no further guidance failed.
+**Failure mode — comparison without dispositions.** A side-by-side that doesn't help the reader pick. The Pass 2 *named winner / named loser* discipline applies here too: who is better off picking A over B, and under what condition? A comparison section that ends with *"both have their place"* and no further guidance failed.
 
 ## 6. Cause-and-effect
 
@@ -133,9 +133,9 @@ Tables are the densest part-by-part form and are usually the right move for comp
 
 **Failure mode — sequence as cause.** Two events that happened in the same timeline aren't necessarily causally linked. *"They deployed the WAF, and the next day the attacks stopped, so the WAF stopped them."* Maybe. Maybe the attacker moved on. Maybe the C2 went down. State the alternative explanations and either rule them out with evidence or acknowledge them. Alred's three tests apply: evidence should be *sufficient* (one or two examples isn't enough), *representative* (don't survey only people who agree with you), and *demonstrable* (show the mechanism, not just the correlation).
 
-**Failure mode — single-cause oversimplification.** Most security failures have several plausible causes; reporting one is rarely the whole story. *"The breach was caused by an unpatched dependency"* — and the inadequate dependency-scanning process, and the deployment pipeline that bypassed it, and the on-call rotation that ignored the alert. Report multiple plausible causes when they're real, in decreasing order of evidence weight (§8). The Pass 0.5 stakes ledger (`multi-pass.md`) is the test: a single-cause story usually has a single named winner; a multi-cause story has several.
+**Failure mode — single-cause oversimplification.** Most security failures have several plausible causes; reporting one is rarely the whole story. *"The breach was caused by an unpatched dependency"* — and the inadequate dependency-scanning process, and the deployment pipeline that bypassed it, and the on-call rotation that ignored the alert. Report multiple plausible causes when they're real, in decreasing order of evidence weight (§8). The Pass 2 stakes ledger (`multi-pass.md`) is the test: a single-cause story usually has a single named winner; a multi-cause story has several.
 
-**Failure mode — speculative effect.** Claiming a future consequence ("this will eventually lead to X") without evidence that the chain actually closes. Write the chain in the actual tense it deserves: *"could lead to"* if speculative, *"has led to, in these specific incidents"* if documented. The Pass 3 *consequence-anchor check* (multi-pass.md item 11) catches the lazy version.
+**Failure mode — speculative effect.** Claiming a future consequence ("this will eventually lead to X") without evidence that the chain actually closes. Write the chain in the actual tense it deserves: *"could lead to"* if speculative, *"has led to, in these specific incidents"* if documented. The Pass 6 *consequence-anchor check* (multi-pass.md item 11) catches the lazy version.
 
 ## 7. Definition
 
@@ -164,7 +164,7 @@ Tables are the densest part-by-part form and are usually the right move for comp
 
 **Failure mode — order-of-importance disguised as discovery order.** *"Here are my findings, in the order I found them, which happens to be roughly worst-to-best."* No. Re-rank or re-label. A reader who notices the ordering is accidental will distrust the rest of the analysis.
 
-**Pairing rule.** Order-of-importance almost always pairs with another method as the secondary. A decreasing-order list of recommendations probably has each item internally structured by cause-and-effect (§6) or general-to-specific (§9). Name both methods in the Pass 0 notes when they apply.
+**Pairing rule.** Order-of-importance almost always pairs with another method as the secondary. A decreasing-order list of recommendations probably has each item internally structured by cause-and-effect (§6) or general-to-specific (§9). Name both methods in the Pass 1 notes when they apply.
 
 ## 9. General-to-specific / specific-to-general
 
@@ -194,7 +194,7 @@ Two methods, mirror images of each other. Pick one explicitly.
 
 ## Combining methods
 
-Most real posts use two or three methods. The *primary* method organizes the body's spine; secondaries handle sections that don't fit the spine. Name both in the Pass 0 notes — *"Primary: comparison, part-by-part. Secondary: order-of-importance, decreasing, for the recommendation section."*
+Most real posts use two or three methods. The *primary* method organizes the body's spine; secondaries handle sections that don't fit the spine. Name both in the Pass 1 notes — *"Primary: comparison, part-by-part. Secondary: order-of-importance, decreasing, for the recommendation section."*
 
 Common combinations from this skill's beat:
 
@@ -211,11 +211,11 @@ Common combinations from this skill's beat:
 
 **Switching mid-post.** Switching methods inside a post is fine — most long posts do — but flag the switch with an explicit transition. *"Up to this point we've been walking the protocol spatially; from here on the analysis is causal: why this design produces this bug class."* Readers can follow any number of switches if the transitions name them. Unsignaled switches read as disorganization.
 
-**Mixing without committing.** A post that has a little bit of everything — *some* comparison, *some* cause-and-effect, *some* chronology — usually means no method was picked. If you can't name a primary in the Pass 0 notes, the body will read as discovery order regardless of how clean the sentences are. Pick one. The body's spine is the first decision the rest of the post can't fix.
+**Mixing without committing.** A post that has a little bit of everything — *some* comparison, *some* cause-and-effect, *some* chronology — usually means no method was picked. If you can't name a primary in the Pass 1 notes, the body will read as discovery order regardless of how clean the sentences are. Pick one. The body's spine is the first decision the rest of the post can't fix.
 
 -----
 
 ## When to skip this file
 
 - **Short posts (under ~1,200 words).** A short post carries linearly on its salient idea; imposing a structural pattern is ceremony.
-- **Posts reviewed mid-flight.** When `multi-pass.md`'s "reviewing an existing draft" mode applies, the body shape is already a fact; the question becomes whether the existing shape matches the content type and whether the discovery-path failure is present. If it is, the fix is a restructure (Pass 3 item 19), not a re-pick from this file.
+- **Posts reviewed mid-flight.** When `multi-pass.md`'s "reviewing an existing draft" mode applies, the body shape is already a fact; the question becomes whether the existing shape matches the content type and whether the discovery-path failure is present. If it is, the fix is a restructure (Pass 6 item 19), not a re-pick from this file.

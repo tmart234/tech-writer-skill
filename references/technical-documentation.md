@@ -588,7 +588,7 @@ They diverge on:
 |Primary content type|Argument, narrative, exposition          |Procedural, descriptive, reference, formal report               |
 |Voice               |Opinionated practitioner                 |Neutral, professional                                           |
 |Tone                |Sharp where evidence backs it            |Measured, default formal                                        |
-|Stakes ledger       |Required (Pass 0.5)                      |Not applicable                                                  |
+|Stakes ledger       |Required (Pass 2)                      |Not applicable                                                  |
 |Anti-pattern catalog|Heavy (writing-rules, anti-patterns refs)|Lighter; mostly conciseness + ethics                            |
 |Default structure   |Diátaxis types + opinion + essay         |Alred's nine methods of development                             |
 |Front matter        |SEO-aware; platform-specific             |House-style / regulatory-template aware                         |
